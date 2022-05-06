@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 18
+cache:
+  directories:
+    - node_modules # Cache the node_modules folder for quicker build times
+script:
+  - npm run build
+  - npm run export -o public_html
+  - touch public_html/.nojekyll # Creates a file telling Github not to build the project using Jekyll
+deploy:
+  provider: pages # Informs Travis this is a deployment to GitHub Pages
+  skip_cleanup: true # Prevents Travis from resetting the working directory made during the build
+  github_token: $github_token # GitHub access token to use when pushing to the gh-pages branch
+  local_dir: public_html # Directory to push to the gh-pages branch
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(master|main)$

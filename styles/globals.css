@@ -77,6 +77,8 @@ body {
 }
 .introducing-photo-column::after {
   content: "";
+  position: absolute;
+  left: 0;
   background-image: inherit;
   background-repeat: inherit;
   background-position: inherit;
