@@ -4,9 +4,9 @@
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css");
 
 :root {
-  --bs-primary: #00bcd4;
-  --bs-blue: var(--bs-primary);
-  --bs-primary-darker: #0097a7;
+  --bs-primary: #00bcd4 !important;
+  --bs-blue: var(--bs-primary) !important;
+  --bs-primary-darker: #0097a7 !important;
 }
 a,
 a:focus {
