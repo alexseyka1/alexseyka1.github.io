@@ -1,8 +1,7 @@
 import Head from "next/head"
-import "bootstrap/dist/css/bootstrap.css"
-import "../styles/globals.css"
 import Topbar from "../components/Topbar"
 import Footer from "../components/Footer"
+import "../styles/scss/global.scss"
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -20,20 +20,6 @@ export default function Skills() {
 
           <div className="col d-flex flex-column align-items-center">
             <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-php-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">PHP</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-yii-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">Yii framework</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
               <i className="fa-4x devicon-javascript-plain"></i>
             </div>
             <div className="fw-bold mt-3">JavaScript</div>
@@ -41,16 +27,23 @@ export default function Skills() {
 
           <div className="col d-flex flex-column align-items-center">
             <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-react-original"></i>
+              <i className="fa-4x devicon-typescript-plain"></i>
             </div>
-            <div className="fw-bold mt-3">React & Redux</div>
+            <div className="fw-bold mt-3">TypeScript</div>
           </div>
 
           <div className="col d-flex flex-column align-items-center">
             <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-vuejs-plain"></i>
+              <i className="fa-4x devicon-nodejs-plain"></i>
             </div>
-            <div className="fw-bold mt-3">Vue</div>
+            <div className="fw-bold mt-3">Node</div>
+          </div>
+
+          <div className="col d-flex flex-column align-items-center">
+            <div className="text-muted flex-shrink-0">
+              <i className="fa-4x devicon-react-original"></i>
+            </div>
+            <div className="fw-bold mt-3">React & Redux</div>
           </div>
 
           <div className="col d-flex flex-column align-items-center">
@@ -69,6 +62,27 @@ export default function Skills() {
 
           <div className="col d-flex flex-column align-items-center">
             <div className="text-muted flex-shrink-0">
+              <i className="fa-4x devicon-bitbucket-original"></i>
+            </div>
+            <div className="fw-bold mt-3">Bitbucket</div>
+          </div>
+
+          <div className="col d-flex flex-column align-items-center">
+            <div className="text-muted flex-shrink-0">
+              <i className="fa-4x devicon-php-plain"></i>
+            </div>
+            <div className="fw-bold mt-3">PHP</div>
+          </div>
+
+          <div className="col d-flex flex-column align-items-center">
+            <div className="text-muted flex-shrink-0">
+              <i className="fa-4x devicon-yii-plain"></i>
+            </div>
+            <div className="fw-bold mt-3">Yii framework</div>
+          </div>
+
+          <div className="col d-flex flex-column align-items-center">
+            <div className="text-muted flex-shrink-0">
               <i className="fa-solid fa-4x fa-gears"></i>
             </div>
             <div className="fw-bold mt-3">REST APIs</div>
@@ -76,9 +90,9 @@ export default function Skills() {
 
           <div className="col d-flex flex-column align-items-center">
             <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-bash-plain"></i>
+              <i className="fa-4x devicon-linux-plain"></i>
             </div>
-            <div className="fw-bold mt-3">Linux terminal</div>
+            <div className="fw-bold mt-3">Linux</div>
           </div>
 
           <div className="col d-flex flex-column align-items-center">
@@ -111,9 +125,9 @@ export default function Skills() {
 
           <div className="col d-flex flex-column align-items-center">
             <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-jetbrains-plain"></i>
+              <i className="fa-4x devicon-amazonwebservices-plain-wordmark"></i>
             </div>
-            <div className="fw-bold mt-3">PHPStorm</div>
+            <div className="fw-bold mt-3">AWS</div>
           </div>
         </div>
       </div>

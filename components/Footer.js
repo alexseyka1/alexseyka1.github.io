@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="row flex-row-reverse flex-md-row">
           <div className="col-12 col-md">
-            <h5>Alexsey Gaidai</h5>
+            <h5>Oleksii Haidai</h5>
 
             <ContactsList />
 

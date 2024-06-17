@@ -1,0 +1,38 @@
+@import "styles/scss/variables";
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 0;
+
+  &:before {
+    content: " ";
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: calc(0.5rem - 1px);
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  & > li {
+    position: relative;
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+
+    &:before {
+      content: " ";
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid $cyan;
+      left: 0;
+      top: 0.25rem;
+      width: 1rem;
+      height: 1rem;
+      z-index: 2;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import styles from "./Projects.module.scss"
 
 export default function Projects() {
   return (
@@ -9,7 +10,9 @@ export default function Projects() {
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 mt-2">
           <div className="col">
             <div
-              className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg project-card"
+              className={
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+              }
               style={{ backgroundImage: "url('/img/projects/dok-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -33,7 +36,9 @@ export default function Projects() {
 
           <div className="col">
             <div
-              className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg project-card"
+              className={
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+              }
               style={{ backgroundImage: "url('/img/projects/ssg-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -57,7 +62,9 @@ export default function Projects() {
 
           <div className="col">
             <div
-              className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg project-card"
+              className={
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+              }
               style={{ backgroundImage: "url('/img/projects/rushhq-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -78,7 +85,9 @@ export default function Projects() {
 
           <div className="col">
             <div
-              className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg project-card"
+              className={
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+              }
               style={{ backgroundImage: "url('/img/projects/enertek-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -99,7 +108,9 @@ export default function Projects() {
 
           <div className="col">
             <div
-              className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg project-card"
+              className={
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+              }
               style={{ backgroundImage: "url('/img/projects/warrp-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -120,7 +131,9 @@ export default function Projects() {
 
           <div className="col">
             <div
-              className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg project-card"
+              className={
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+              }
               style={{ backgroundImage: "url('/img/projects/crm.jpg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
