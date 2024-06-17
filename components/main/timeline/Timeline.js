@@ -134,8 +134,8 @@ export default function Timeline() {
             </p>
             <p>
               The new investor had his own development team and preferred that they continue developing the application. The problem was that they knew nothing
-              about the hardware for which the application was made, nor about the existing application, nor about the technologies that were used in it. That's
-              why I was hired as a consultant for this team (a consultant who also writes code).
+              about the hardware for which the application was made, nor about the existing application, nor about the technologies that were used in it.
+              That&apos;s why I was hired as a consultant for this team (a consultant who also writes code).
             </p>
             <p>
               During 9 months of working in an international company, I gained a wealth of experience in communication, mentoring other developers, and also
