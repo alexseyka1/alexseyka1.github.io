@@ -12,7 +12,7 @@ export default function MyPhoto() {
               Using my experience and development skills, I make amazing complex systems that solve business problems and help it grow, as well as easy to use.
             </p>
             <div className="d-grid d-lg-flex justify-content-stretch">
-              <a href="oleksii-haidai-cv.pdf" className="btn btn-primary btn-lg px-4 me-lg-2" download>
+              <a href="Oleksii Haidai Full Stack Developer.pdf" className="btn btn-primary btn-lg px-4 me-lg-2" download>
                 Download resume
               </a>
               <a href="https://github.com/alexseyka1" className="btn btn-lg btn-outline-secondary px-4 mt-2 mt-lg-0">
