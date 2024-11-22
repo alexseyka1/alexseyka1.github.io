@@ -1,0 +1,47 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-5cd94c89d3acac5f.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/VOAN8SR_6g9QwDH5lHkwQ/_buildManifest.js",
+    "static/VOAN8SR_6g9QwDH5lHkwQ/_ssgManifest.js",
+    "static/VOAN8SR_6g9QwDH5lHkwQ/_middlewareManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-a87821de553db91d.js",
+      "static/chunks/main-f4ae3437c92c1efc.js",
+      "static/css/48d06b2d7ad888ca.css",
+      "static/chunks/pages/index-6895dfa1340529c6.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-a87821de553db91d.js",
+      "static/chunks/main-f4ae3437c92c1efc.js",
+      "static/css/468b7cdc5dc6dd0b.css",
+      "static/chunks/pages/_app-733120cf50065c8a.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-a87821de553db91d.js",
+      "static/chunks/main-f4ae3437c92c1efc.js",
+      "static/chunks/pages/_error-1995526792b513b2.js"
+    ],
+    "/projects/dok": [
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-a87821de553db91d.js",
+      "static/chunks/main-f4ae3437c92c1efc.js",
+      "static/chunks/pages/projects/dok-d2ae4d6418db4cbf.js"
+    ],
+    "/projects/solar-service-group": [
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-a87821de553db91d.js",
+      "static/chunks/main-f4ae3437c92c1efc.js",
+      "static/chunks/pages/projects/solar-service-group-b4dde030152bf628.js"
+    ]
+  },
+  "ampFirstPages": []
+}
