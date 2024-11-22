@@ -23,7 +23,8 @@ mkdir "../$tempdir" && (\
     && git status \
   ) \
   && (cd code \
-    && git commit -a -m "Deployed by Bash script" \
+    && git add . \
+    && git commit -m "Deployed by Bash script" \
     && git push origin $to_branch
   ) \
 ) \
