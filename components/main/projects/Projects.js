@@ -1,5 +1,4 @@
 import Link from "next/link"
-import styles from "./Projects.module.scss"
 
 export default function Projects() {
   return (
@@ -11,7 +10,8 @@ export default function Projects() {
           <div className="col">
             <div
               className={
-                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " +
+                /*styles.project_card*/ ""
               }
               style={{ backgroundImage: "url('/img/projects/dok-bg.jpeg')" }}
             >
@@ -29,7 +29,7 @@ export default function Projects() {
                 </ul>
               </div>
               <Link href="/projects/dok">
-                <a className="stretched-link" title="View project details"></a>
+                <span className="stretched-link" title="View project details"></span>
               </Link>
             </div>
           </div>
@@ -37,7 +37,8 @@ export default function Projects() {
           <div className="col">
             <div
               className={
-                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " +
+                /*styles.project_card*/ ""
               }
               style={{ backgroundImage: "url('/img/projects/ssg-bg.jpeg')" }}
             >
@@ -55,7 +56,7 @@ export default function Projects() {
                 </ul>
               </div>
               <Link href="/projects/solar-service-group">
-                <a className="stretched-link" title="View project details"></a>
+                <span className="stretched-link" title="View project details"></span>
               </Link>
             </div>
           </div>
@@ -63,7 +64,8 @@ export default function Projects() {
           <div className="col">
             <div
               className={
-                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " +
+                /*styles.project_card*/ ""
               }
               style={{ backgroundImage: "url('/img/projects/rushhq-bg.jpeg')" }}
             >
@@ -81,7 +83,7 @@ export default function Projects() {
                 </ul>
               </div>
               <Link href="/projects/rush-hq">
-                <a className="stretched-link" title="View RushHQ details"></a>
+                <span className="stretched-link" title="View RushHQ details"></span>
               </Link>
             </div>
           </div>
@@ -89,7 +91,8 @@ export default function Projects() {
           <div className="col">
             <div
               className={
-                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " +
+                /*styles.project_card*/ ""
               }
               style={{ backgroundImage: "url('/img/projects/enertek-bg.jpeg')" }}
             >
@@ -112,7 +115,8 @@ export default function Projects() {
           <div className="col">
             <div
               className={
-                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " +
+                /*styles.project_card*/ ""
               }
               style={{ backgroundImage: "url('/img/projects/warrp-bg.jpeg')" }}
             >
@@ -135,7 +139,8 @@ export default function Projects() {
           <div className="col">
             <div
               className={
-                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " + styles.project_card
+                "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " +
+                /*styles.project_card*/ ""
               }
               style={{ backgroundImage: "url('/img/projects/crm.jpg')" }}
             >

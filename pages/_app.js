@@ -1,7 +1,6 @@
 import Head from "next/head"
 import Topbar from "../components/Topbar"
 import Footer from "../components/Footer"
-import "../styles/scss/global.scss"
 
 function MyApp({ Component, pageProps }) {
   return (

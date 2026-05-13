@@ -20,27 +20,27 @@ export default function Footer() {
             <ul className="list-unstyled text-small">
               <li className="mb-1">
                 <Link href="/#">
-                  <a className="link-secondary text-decoration-none">My photo</a>
+                  <span className="link-secondary text-decoration-none">My photo</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#timeline">
-                  <a className="link-secondary text-decoration-none">Timeline</a>
+                  <span className="link-secondary text-decoration-none">Timeline</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#projects">
-                  <a className="link-secondary text-decoration-none">Projects</a>
+                  <span className="link-secondary text-decoration-none">Projects</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#skills-and-tools">
-                  <a className="link-secondary text-decoration-none">Skills & Tools</a>
+                  <span className="link-secondary text-decoration-none">Skills & Tools</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#contact">
-                  <a className="link-secondary text-decoration-none">Contact</a>
+                  <span className="link-secondary text-decoration-none">Contact</span>
                 </Link>
               </li>
             </ul>
@@ -50,32 +50,32 @@ export default function Footer() {
             <ul className="list-unstyled text-small">
               <li className="mb-1">
                 <Link href="/projects/dok">
-                  <a className="link-secondary text-decoration-none">Dok.ua</a>
+                  <span className="link-secondary text-decoration-none">Dok.ua</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/solar-service-group">
-                  <a className="link-secondary text-decoration-none">Solar Service Group</a>
+                  <span className="link-secondary text-decoration-none">Solar Service Group</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/rush-hq">
-                  <a className="link-secondary text-decoration-none">Rush HQ</a>
+                  <span className="link-secondary text-decoration-none">Rush HQ</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/enertek">
-                  <a className="link-secondary text-decoration-none">Enertek</a>
+                  <span className="link-secondary text-decoration-none">Enertek</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/warrpit">
-                  <a className="link-secondary text-decoration-none">Warrp.it</a>
+                  <span className="link-secondary text-decoration-none">Warrp.it</span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/other-crm">
-                  <a className="link-secondary text-decoration-none">Other CRM systems</a>
+                  <span className="link-secondary text-decoration-none">Other CRM systems</span>
                 </Link>
               </li>
             </ul>

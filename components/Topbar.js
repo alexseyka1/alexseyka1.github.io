@@ -21,27 +21,27 @@ export default function Topbar() {
             <ul className="navbar-nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
               <li>
                 <Link href="/#">
-                  <a className="nav-link px-2 link-secondary">Home</a>
+                  <span className="nav-link px-2 link-secondary">Home</span>
                 </Link>
               </li>
               <li>
                 <Link href="/#contact">
-                  <a className="nav-link px-2 link-dark">Contact</a>
+                  <span className="nav-link px-2 link-dark">Contact</span>
                 </Link>
               </li>
               <li>
                 <Link href="/#timeline">
-                  <a className="nav-link px-2 link-dark">Timeline</a>
+                  <span className="nav-link px-2 link-dark">Timeline</span>
                 </Link>
               </li>
               <li>
                 <Link href="/#projects">
-                  <a className="nav-link px-2 link-dark">Projects</a>
+                  <span className="nav-link px-2 link-dark">Projects</span>
                 </Link>
               </li>
               <li>
                 <Link href="/#skills-and-tools">
-                  <a className="nav-link px-2 link-dark">Skills & tools</a>
+                  <span className="nav-link px-2 link-dark">Skills & tools</span>
                 </Link>
               </li>
             </ul>
