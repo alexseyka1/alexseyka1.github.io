@@ -1,7 +1,18 @@
+import { cn } from "@utils/cn";
 import { AppProps } from "next/app";
+import { Open_Sans } from "next/font/google";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
+import "../styles/globals.css";
+
+const openSans = Open_Sans({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-open-sans",
+  subsets: ["latin", "latin-ext"],
+  adjustFontFallback: false,
+  preload: true,
+});
 
 function MyApp({
   Component,
@@ -25,13 +36,15 @@ function MyApp({
         <link rel="icon" type="image/png" href="#" />
       </Head>
 
-      <Topbar />
+      <div className={cn("w-screen font-sans", openSans.variable)}>
+        <Topbar />
 
-      <main className="main-content">
-        <Component {...pageProps} />
-      </main>
+        <main className="main-content">
+          <Component {...pageProps} />
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 }

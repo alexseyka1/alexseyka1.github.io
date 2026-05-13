@@ -16,6 +16,7 @@
     "paths": {
       "@components/*": ["./components/*"],
       "@config/*": ["./config/*"],
+      "@utils/*": ["./utils/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

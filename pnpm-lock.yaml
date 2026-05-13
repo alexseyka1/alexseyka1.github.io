@@ -14,6 +14,9 @@ dependencies:
   autoprefixer:
     specifier: ^10.5.0
     version: 10.5.0(postcss@8.5.14)
+  clsx:
+    specifier: ^2.1.1
+    version: 2.1.1
   deepmerge:
     specifier: ^4.3.1
     version: 4.3.1
@@ -38,6 +41,9 @@ dependencies:
   react-dom:
     specifier: 19.2.5
     version: 19.2.5(react@19.2.5)
+  tailwind-merge:
+    specifier: ^3.5.0
+    version: 3.6.0
 
 devDependencies:
   '@headlessui/tailwindcss':
@@ -1371,6 +1377,11 @@ packages:
       string-width: 1.0.2
       strip-ansi: 3.0.1
       wrap-ansi: 2.1.0
+    dev: false
+
+  /clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
     dev: false
 
   /code-point-at@1.1.0:
@@ -4971,6 +4982,10 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /tailwind-merge@3.6.0:
+    resolution: {integrity: sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==}
+    dev: false
 
   /tailwindcss@4.3.0:
     resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
