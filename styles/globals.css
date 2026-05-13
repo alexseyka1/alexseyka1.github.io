@@ -141,7 +141,9 @@ section#contact {
 }
 
 .enertek-logo {
-  box-shadow: 0 0 0 2px #ff8800b5 inset, 0 0 3px 0 #ff8a00;
+  box-shadow:
+    0 0 0 2px #ff8800b5 inset,
+    0 0 3px 0 #ff8a00;
 }
 
 .feature-icon {

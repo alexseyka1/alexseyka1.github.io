@@ -1,6 +1,6 @@
-@import 'variables';
-@import '/node_modules/bootstrap/scss/bootstrap.scss';
-@import 'fonts';
+@use "variables" as *;
+@use "/node_modules/bootstrap/scss/bootstrap.scss" as *;
+@use "fonts" as *;
 
 * {
   box-sizing: border-box;
@@ -90,7 +90,9 @@ section#contact {
 }
 
 .enertek-logo {
-  box-shadow: 0 0 0 2px #ff8800b5 inset, 0 0 3px 0 #ff8a00;
+  box-shadow:
+    0 0 0 2px #ff8800b5 inset,
+    0 0 3px 0 #ff8a00;
 }
 
 .feature-icon {

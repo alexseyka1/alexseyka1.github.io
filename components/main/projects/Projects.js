@@ -80,6 +80,9 @@ export default function Projects() {
                   </li>
                 </ul>
               </div>
+              <Link href="/projects/rush-hq">
+                <a className="stretched-link" title="View RushHQ details"></a>
+              </Link>
             </div>
           </div>
 

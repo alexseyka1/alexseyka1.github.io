@@ -4,7 +4,7 @@ export default function Dok() {
   return (
     <>
       <Head>
-        <title>Alexsey Gaidai - Project dok.ua</title>
+        <title>Oleksii Haidai - Project dok.ua</title>
         <meta name="description" content="My first commercial project. Online auto parts store dok.ua." />
       </Head>
 

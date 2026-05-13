@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" type="image/png" href="/logo.png" />
-        <title>Alexsey Gaidai - Software Engineer</title>
+        <title>Oleksii Haidai - Software Engineer</title>
         <meta
           name="description"
           content="I make amazing complex systems that solve business problems and help it grow, as well as easy to use"

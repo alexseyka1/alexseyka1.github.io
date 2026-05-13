@@ -4,8 +4,8 @@ export default function SolarServiceGroup() {
   return (
     <>
       <Head>
-        <title>Alexsey Gaidai - Project Solar Service Group</title>
-        <meta name="description" content="My first commercial project. Online auto parts store dok.ua." />
+        <title>Oleksii Haidai - Project Solar Service Group</title>
+        <meta name="description" content="Affordable installing and maintaining solar panels for everyone." />
       </Head>
 
       <section>
