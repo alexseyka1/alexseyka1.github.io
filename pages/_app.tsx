@@ -1,8 +1,12 @@
-import Head from "next/head"
-import Topbar from "../components/Topbar"
-import Footer from "../components/Footer"
+import { AppProps } from "next/app";
+import Head from "next/head";
+import Footer from "../components/Footer";
+import Topbar from "../components/Topbar";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({
+  Component,
+  pageProps,
+}: Pick<AppProps, "Component" | "pageProps">) {
   return (
     <>
       <Head>
@@ -14,7 +18,10 @@ function MyApp({ Component, pageProps }) {
         />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
         <link rel="icon" type="image/png" href="#" />
       </Head>
 
@@ -26,7 +33,7 @@ function MyApp({ Component, pageProps }) {
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

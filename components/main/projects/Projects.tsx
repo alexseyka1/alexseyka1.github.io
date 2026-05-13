@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -16,10 +16,16 @@ export default function Projects() {
               style={{ backgroundImage: "url('/img/projects/dok-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">dok.ua</h2>
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">
+                  dok.ua
+                </h2>
                 <ul className="d-flex list-unstyled mt-auto">
                   <li className="me-auto glass-bg p-1">
-                    <img src="/img/projects/dok-logo-large.svg" alt="dok.ua" height="40" />
+                    <img
+                      src="/img/projects/dok-logo-large.svg"
+                      alt="dok.ua"
+                      height="40"
+                    />
                   </li>
                   <li className="d-flex align-items-center me-3">
                     <small>
@@ -29,7 +35,10 @@ export default function Projects() {
                 </ul>
               </div>
               <Link href="/projects/dok">
-                <span className="stretched-link" title="View project details"></span>
+                <span
+                  className="stretched-link"
+                  title="View project details"
+                ></span>
               </Link>
             </div>
           </div>
@@ -43,10 +52,16 @@ export default function Projects() {
               style={{ backgroundImage: "url('/img/projects/ssg-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">Solar Service Group</h2>
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">
+                  Solar Service Group
+                </h2>
                 <ul className="d-flex list-unstyled mt-auto">
                   <li className="me-auto">
-                    <img src="/img/projects/ssg-logo.jpeg" alt="Solar Service Group" height="40" />
+                    <img
+                      src="/img/projects/ssg-logo.jpeg"
+                      alt="Solar Service Group"
+                      height="40"
+                    />
                   </li>
                   <li className="d-flex align-items-center me-3">
                     <small>
@@ -56,7 +71,10 @@ export default function Projects() {
                 </ul>
               </div>
               <Link href="/projects/solar-service-group">
-                <span className="stretched-link" title="View project details"></span>
+                <span
+                  className="stretched-link"
+                  title="View project details"
+                ></span>
               </Link>
             </div>
           </div>
@@ -70,10 +88,16 @@ export default function Projects() {
               style={{ backgroundImage: "url('/img/projects/rushhq-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">Rush HQ</h2>
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">
+                  Rush HQ
+                </h2>
                 <ul className="d-flex list-unstyled mt-auto">
                   <li className="me-auto">
-                    <img src="/img/projects/rushhq-logo.png" alt="Rush HQ" height="40" />
+                    <img
+                      src="/img/projects/rushhq-logo.png"
+                      alt="Rush HQ"
+                      height="40"
+                    />
                   </li>
                   <li className="d-flex align-items-center me-3">
                     <small>
@@ -83,7 +107,10 @@ export default function Projects() {
                 </ul>
               </div>
               <Link href="/projects/rush-hq">
-                <span className="stretched-link" title="View RushHQ details"></span>
+                <span
+                  className="stretched-link"
+                  title="View RushHQ details"
+                ></span>
               </Link>
             </div>
           </div>
@@ -94,13 +121,21 @@ export default function Projects() {
                 "card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg " +
                 /*styles.project_card*/ ""
               }
-              style={{ backgroundImage: "url('/img/projects/enertek-bg.jpeg')" }}
+              style={{
+                backgroundImage: "url('/img/projects/enertek-bg.jpeg')",
+              }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">Enertek</h2>
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">
+                  Enertek
+                </h2>
                 <ul className="d-flex list-unstyled mt-auto">
                   <li className="me-auto bg-black rounded-circle enertek-logo">
-                    <img src="/img/projects/enertek-logo.svg" alt="Enertek" height="40" />
+                    <img
+                      src="/img/projects/enertek-logo.svg"
+                      alt="Enertek"
+                      height="40"
+                    />
                   </li>
                   <li className="d-flex align-items-center me-3">
                     <small>
@@ -121,10 +156,16 @@ export default function Projects() {
               style={{ backgroundImage: "url('/img/projects/warrp-bg.jpeg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">Warrp.it</h2>
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">
+                  Warrp.it
+                </h2>
                 <ul className="d-flex list-unstyled mt-auto">
                   <li className="me-auto">
-                    <img src="/img/projects/warrp-logo-circle.png" alt="Warrp.it" height="40" />
+                    <img
+                      src="/img/projects/warrp-logo-circle.png"
+                      alt="Warrp.it"
+                      height="40"
+                    />
                   </li>
                   <li className="d-flex align-items-center me-3">
                     <small>
@@ -145,7 +186,9 @@ export default function Projects() {
               style={{ backgroundImage: "url('/img/projects/crm.jpg')" }}
             >
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">Other CRM Systems</h2>
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold project-card__title">
+                  Other CRM Systems
+                </h2>
                 <ul className="d-flex list-unstyled mt-auto">
                   <li className="me-auto">...</li>
                   <li className="d-flex align-items-center me-3">
@@ -160,5 +203,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

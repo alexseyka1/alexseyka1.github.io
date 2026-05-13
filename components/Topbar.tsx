@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Topbar() {
   return (
@@ -8,7 +8,7 @@ export default function Topbar() {
           <label htmlFor="topbar-dropdown-enabled">
             <span
               className="navbar-toggler collapsed text-reset"
-              type="button"
+              // type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbar-top"
             >
@@ -17,7 +17,10 @@ export default function Topbar() {
           </label>
           <input type="checkbox" id="topbar-dropdown-enabled" />
 
-          <div className="navbar-collapse justify-content-md-center collapse" id="navbar-top">
+          <div
+            className="navbar-collapse justify-content-md-center collapse"
+            id="navbar-top"
+          >
             <ul className="navbar-nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
               <li>
                 <Link href="/#">
@@ -41,7 +44,9 @@ export default function Topbar() {
               </li>
               <li>
                 <Link href="/#skills-and-tools">
-                  <span className="nav-link px-2 link-dark">Skills & tools</span>
+                  <span className="nav-link px-2 link-dark">
+                    Skills & tools
+                  </span>
                 </Link>
               </li>
             </ul>
@@ -49,5 +54,5 @@ export default function Topbar() {
         </div>
       </nav>
     </header>
-  )
+  );
 }

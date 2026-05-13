@@ -22,7 +22,12 @@ export default function ContactsList() {
 
       <li>
         <i className="fa-brands fa-fw fa-telegram me-1"></i>
-        <a className="text-decoration-none" href="https://t.me/alexseyka1" target="_blank" rel="noreferrer">
+        <a
+          className="text-decoration-none"
+          href="https://t.me/alexseyka1"
+          target="_blank"
+          rel="noreferrer"
+        >
           Telegram
         </a>
       </li>
@@ -41,10 +46,15 @@ export default function ContactsList() {
 
       <li>
         <i className="fa-brands fa-fw fa-github me-1"></i>
-        <a className="text-decoration-none" href="https://github.com/alexseyka1" target="_blank" rel="noreferrer">
+        <a
+          className="text-decoration-none"
+          href="https://github.com/alexseyka1"
+          target="_blank"
+          rel="noreferrer"
+        >
           GitHub
         </a>
       </li>
     </ul>
-  )
+  );
 }

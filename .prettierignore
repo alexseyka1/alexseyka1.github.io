@@ -4,8 +4,4 @@
 /.nx/cache
 web/public
 pnpm-lock.yaml
-db/src/enums.ts
-db/src/schema.ts
-helm/
-docker/keycloak/realms
 /.nx/workspace-data

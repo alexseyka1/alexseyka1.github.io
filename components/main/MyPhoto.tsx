@@ -12,8 +12,9 @@ export default function MyPhoto() {
             <h1 className="display-5 fw-bold lh-1 mb-0">Oleksii Haidai</h1>
             <p className="fs-5 text-muted mb-3">&mdash; Software Engineer</p>
             <p className="lead py-2">
-              Using my experience and development skills, I make amazing complex systems that solve business problems
-              and help it grow, as well as easy to use.
+              Using my experience and development skills, I make amazing complex
+              systems that solve business problems and help it grow, as well as
+              easy to use.
             </p>
             <div className="d-grid d-lg-flex justify-content-stretch">
               <a
@@ -23,7 +24,10 @@ export default function MyPhoto() {
               >
                 Download resume
               </a>
-              <a href="https://github.com/alexseyka1" className="btn btn-lg btn-outline-secondary px-4 mt-2 mt-lg-0">
+              <a
+                href="https://github.com/alexseyka1"
+                className="btn btn-lg btn-outline-secondary px-4 mt-2 mt-lg-0"
+              >
                 <i className="fa-brands fa-github"></i> GitHub
               </a>
             </div>
@@ -31,5 +35,5 @@ export default function MyPhoto() {
         </div>
       </div>
     </section>
-  )
+  );
 }

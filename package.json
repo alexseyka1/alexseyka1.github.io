@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/tailwindcss": "^0.2.2",
     "@tailwindcss/postcss": "^4.2.2",
     "@untitled-ui/icons-react": "^0.1.4",
     "autoprefixer": "^10.5.0",
@@ -24,11 +23,19 @@
     "react-dom": "19.2.5"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^16.2.4",
+    "@headlessui/tailwindcss": "^0.2.2",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.2.3",
     "dotenv": "^17.4.2",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "postcss": "^8.5.10",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "typescript": "6.0.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {

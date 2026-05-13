@@ -1,5 +1,5 @@
-import Link from "next/link"
-import ContactsList from "./ContactsList"
+import Link from "next/link";
+import ContactsList from "./ContactsList";
 export default function Footer() {
   return (
     <footer className="bg-dark text-light py-5 main-footer">
@@ -11,7 +11,9 @@ export default function Footer() {
             <ContactsList />
 
             <div className="mt-2">
-              <small className="d-block mb-3 text-muted">© {new Date().getFullYear()}</small>
+              <small className="d-block mb-3 text-muted">
+                © {new Date().getFullYear()}
+              </small>
             </div>
           </div>
 
@@ -20,27 +22,37 @@ export default function Footer() {
             <ul className="list-unstyled text-small">
               <li className="mb-1">
                 <Link href="/#">
-                  <span className="link-secondary text-decoration-none">My photo</span>
+                  <span className="link-secondary text-decoration-none">
+                    My photo
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#timeline">
-                  <span className="link-secondary text-decoration-none">Timeline</span>
+                  <span className="link-secondary text-decoration-none">
+                    Timeline
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#projects">
-                  <span className="link-secondary text-decoration-none">Projects</span>
+                  <span className="link-secondary text-decoration-none">
+                    Projects
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#skills-and-tools">
-                  <span className="link-secondary text-decoration-none">Skills & Tools</span>
+                  <span className="link-secondary text-decoration-none">
+                    Skills & Tools
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#contact">
-                  <span className="link-secondary text-decoration-none">Contact</span>
+                  <span className="link-secondary text-decoration-none">
+                    Contact
+                  </span>
                 </Link>
               </li>
             </ul>
@@ -50,32 +62,44 @@ export default function Footer() {
             <ul className="list-unstyled text-small">
               <li className="mb-1">
                 <Link href="/projects/dok">
-                  <span className="link-secondary text-decoration-none">Dok.ua</span>
+                  <span className="link-secondary text-decoration-none">
+                    Dok.ua
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/solar-service-group">
-                  <span className="link-secondary text-decoration-none">Solar Service Group</span>
+                  <span className="link-secondary text-decoration-none">
+                    Solar Service Group
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/rush-hq">
-                  <span className="link-secondary text-decoration-none">Rush HQ</span>
+                  <span className="link-secondary text-decoration-none">
+                    Rush HQ
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/enertek">
-                  <span className="link-secondary text-decoration-none">Enertek</span>
+                  <span className="link-secondary text-decoration-none">
+                    Enertek
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/warrpit">
-                  <span className="link-secondary text-decoration-none">Warrp.it</span>
+                  <span className="link-secondary text-decoration-none">
+                    Warrp.it
+                  </span>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/projects/other-crm">
-                  <span className="link-secondary text-decoration-none">Other CRM systems</span>
+                  <span className="link-secondary text-decoration-none">
+                    Other CRM systems
+                  </span>
                 </Link>
               </li>
             </ul>
@@ -83,5 +107,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
