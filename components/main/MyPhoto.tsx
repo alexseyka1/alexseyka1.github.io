@@ -1,39 +1,51 @@
+import { Button } from "@components/ui/Button";
+import Image from "next/image";
+
 export default function MyPhoto() {
   return (
-    <section className="pt-1">
-      <div className="container">
-        <div className="row flex-md-row-reverse justify-content-center align-items-center g-5">
-          <div
-            className="col-md-6 col-lg-6 shadow-lg rounded introducing-photo-column"
-            style={{ backgroundImage: "url(/img/bw.jpg)" }}
-          ></div>
-          <div className="col-md-6 col-lg-6">
+    <div className="container">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="order-2 md:order-1 flex justify-center items-center p-12">
+          <div>
             Hello, I&apos;m
-            <h1 className="display-5 fw-bold lh-1 mb-0">Oleksii Haidai</h1>
-            <p className="fs-5 text-muted mb-3">&mdash; Software Engineer</p>
-            <p className="lead py-2">
+            <h1 className="text-5xl font-medium lh-1 mb-0">Oleksii Haidai</h1>
+            <p className="text-lg text-gray mb-3">&mdash; Software Engineer</p>
+            <p className="text-xl font-extralight py-2">
               Using my experience and development skills, I make amazing complex
               systems that solve business problems and help it grow, as well as
               easy to use.
             </p>
-            <div className="d-grid d-lg-flex justify-content-stretch">
-              <a
+            <div className="flex flex-row flex-wrap items-center mt-4 gap-2">
+              <Button
+                variant="primary"
+                as="Link"
                 href="Oleksii Haidai Full Stack Developer.pdf"
-                className="btn btn-primary btn-lg px-4 me-lg-2"
                 download
               >
                 Download resume
-              </a>
-              <a
+              </Button>
+              <Button
+                variant="secondary"
+                as="Link"
                 href="https://github.com/alexseyka1"
-                className="btn btn-lg btn-outline-secondary px-4 mt-2 mt-lg-0"
               >
                 <i className="fa-brands fa-github"></i> GitHub
-              </a>
+              </Button>
             </div>
           </div>
         </div>
+
+        <div className="order-1 md:order-2">
+          <div className="aspect-square">
+            <Image
+              src="/img/bw.jpg"
+              width={1000}
+              height={1001}
+              alt="Oleksii Haidai's portrait photo"
+            />
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
