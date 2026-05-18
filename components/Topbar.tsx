@@ -1,58 +1,81 @@
+import { MENU_ITEMS } from "@config/menu";
+import { cn } from "@utils/cn";
 import Link from "next/link";
+import { useMemo, useState } from "react";
+import { LogoIcon } from "./icons/Logo";
 
 export default function Topbar() {
   return (
-    <header className="topbar">
-      <nav className="navbar navbar-expand-lg border-bottom">
-        <div className="container-fluid justify-content-end">
-          <label htmlFor="topbar-dropdown-enabled">
-            <span
-              className="navbar-toggler collapsed text-reset"
-              // type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbar-top"
-            >
-              <i className="fa-solid fa-bars-staggered"></i>
-            </span>
-          </label>
-          <input type="checkbox" id="topbar-dropdown-enabled" />
+    <header className="sticky top-0 backdrop-blur bg-white/85 z-10">
+      <nav className="border-b">
+        <div className="container justify-end py-2">
+          <div className="flex flex-row justify-between items-center">
+            <div>
+              <Link href="/#" passHref>
+                <LogoIcon className="text-black h-10 w-20" />
+              </Link>
+            </div>
 
-          <div
-            className="navbar-collapse justify-content-md-center collapse"
-            id="navbar-top"
-          >
-            <ul className="navbar-nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-              <li>
-                <Link href="/#">
-                  <span className="nav-link px-2 link-secondary">Home</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#contact">
-                  <span className="nav-link px-2 link-dark">Contact</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#timeline">
-                  <span className="nav-link px-2 link-dark">Timeline</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#projects">
-                  <span className="nav-link px-2 link-dark">Projects</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#skills-and-tools">
-                  <span className="nav-link px-2 link-dark">
-                    Skills & tools
-                  </span>
-                </Link>
-              </li>
-            </ul>
+            <div>
+              <DesktopMenu />
+              <MobileMenu />
+            </div>
           </div>
         </div>
       </nav>
     </header>
+  );
+}
+
+function DesktopMenu() {
+  return (
+    <ul
+      className={cn(
+        "hidden md:flex flex-col md:flex-row md:mb-0 md:justify-center md:items-center",
+      )}
+    >
+      {MENU_ITEMS.map(({ label, href }) => (
+        <li key={label}>
+          <Link href={href} passHref>
+            <span className="p-2 text-gray-700">{label}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function MobileMenu() {
+  const [showMenu, setShowMenu] = useState(false);
+  const closeMenu = useMemo(() => setShowMenu.bind(null, false), []);
+
+  return (
+    <div className="md:hidden">
+      <button type="button" onClick={() => setShowMenu((value) => !value)}>
+        Menu
+      </button>
+      <div
+        className={cn(
+          "fixed top-0 left-0 w-screen h-screen bg-white/85 z-11 overflow-x-hidden overflow-y-auto",
+          !showMenu && "hidden",
+        )}
+        onClick={closeMenu}
+      >
+        <ul
+          className={cn("flex flex-col mb-0 justify-center items-start mt-16")}
+        >
+          {MENU_ITEMS.map(({ label, href }) => (
+            <li
+              key={label}
+              className="text-2xl p-3 border-b-2 border-b-warning-700 bg-warning-100 hover:scale-x-120"
+            >
+              <Link href={href} passHref onClick={closeMenu}>
+                <span className="p-2 text-gray-700">{label}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

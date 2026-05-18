@@ -1,13 +1,11 @@
 @import "tailwindcss";
 @config "../tailwind.config.mjs";
 
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap"); */
 /* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"); */
-/* @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"); */
+/* @import "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"; */
 
 :root {
   --navigation-height: 3.5rem;
-  --my-otark-sidebar-width: 17rem;
   --inbox-sidebar-width: 25rem;
 }
 
@@ -32,29 +30,6 @@ body {
   @apply bg-background antialiased;
 }
 
-::-webkit-scrollbar {
-  width: 17px;
-  height: 17px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  border: 6px solid transparent;
-  background-clip: padding-box;
-  @apply bg-black/15;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  border-radius: 8px;
-  border: 4px solid transparent;
-  background-clip: padding-box;
-  @apply bg-black/30;
-}
-
 .container {
   @apply container mx-auto px-5 lg:px-7;
 }
@@ -76,125 +51,14 @@ body {
   }
 }
 
-.react-select input {
-  box-shadow: none !important;
-}
-
-/* Hide number input arrows */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Hide number input arrows on Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.mdx-editor ul > li {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-
-.mdx-editor ol > li {
-  list-style: decimal;
-  margin-left: 1.5rem;
-}
-
-.markdown ul,
-.markdown ol {
-  display: flex;
-  flex-direction: column;
-}
-
-.markdown ul > li {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-
-.markdown ol > li {
-  list-style: decimal;
-  margin-left: 1.5rem;
-}
-
-.h-scroll-gradient {
-  background:
-    linear-gradient(90deg, #fff 33%, rgba(255, 255, 255, 0)),
-    linear-gradient(90deg, rgba(255, 255, 255, 0), #fff 66%) 0 100%,
-    radial-gradient(
-      farthest-side at 0 50%,
-      rgba(208, 213, 221, 0.7),
-      transparent
-    ),
-    radial-gradient(
-        farthest-side at 100% 50%,
-        rgba(208, 213, 221, 0.7),
-        transparent
-      )
-      0 100%;
-  background-repeat: no-repeat;
-  background-size:
-    30px 100%,
-    30px 100%,
-    10px 100%,
-    10px 200%;
-  background-position:
-    0 0,
-    100%,
-    0 0,
-    100%;
-  background-attachment: local, local, scroll, scroll;
-}
-
-a,
-a:focus {
-  color: var(--bs-primary-darker);
-}
-a:hover {
-  color: var(--bs-primary);
-}
-
-.btn-primary,
-.btn-primary:focus {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-}
-.btn-primary:hover,
-.btn-primary:active {
-  background-color: var(--bs-primary-darker);
-  border-color: var(--bs-primary-darker);
-}
-.btn-primary:focus,
-.btn-primary:focus:active {
-  box-shadow: 0 0 0 0.25rem rgb(0, 151, 167, 0.5);
-}
-
-* {
-  box-sizing: border-box;
-}
-html {
-  height: -webkit-fill-available;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  font-family: "Open Sans", sans-serif;
-}
-
-.topbar {
+/* .topbar {
   position: sticky;
   top: 0;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   background: rgba(255, 255, 255, 0.85);
   z-index: 10;
-}
+} */
 
 .topbar [type="checkbox"] {
   display: none;
@@ -310,11 +174,6 @@ section#contact {
     width: 25%;
     margin-bottom: 0.5rem;
   }
-}
-
-.main-footer {
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5) inset;
 }
 
 /** Timeline > */

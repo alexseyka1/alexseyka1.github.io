@@ -1,15 +1,15 @@
 import { cn } from "@utils/cn";
 import { AppProps } from "next/app";
-import { Open_Sans } from "next/font/google";
+import { Comic_Neue } from "next/font/google";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
 import "../styles/globals.css";
 
-const openSans = Open_Sans({
-  weight: ["300", "400", "500", "600", "700", "800"],
+const openSans = Comic_Neue({
+  weight: ["300", "400"],
   variable: "--font-open-sans",
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   adjustFontFallback: false,
   preload: true,
 });
@@ -36,7 +36,7 @@ function MyApp({
         <link rel="icon" type="image/png" href="#" />
       </Head>
 
-      <div className={cn("w-screen font-sans", openSans.variable)}>
+      <div className={cn("w-screen", openSans.variable)}>
         <Topbar />
 
         <main className="main-content">
