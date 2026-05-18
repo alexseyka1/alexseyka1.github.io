@@ -83,7 +83,6 @@ tsconfig.tsbuildinfo
 .zprofile
 .zshrc
 /HEAD
-/config
 /hooks
 /objects
 /refs
