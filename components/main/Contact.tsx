@@ -3,7 +3,7 @@ import ContactsList from "../ContactsList";
 export default function Contact() {
   return (
     <>
-      <section id="contact" className="p-0">
+      <section id="contact">
         <div className="container p-4">
           <div className="row">
             <div className="d-none d-md-flex col-12 col-md-6 d-flex justify-content-center align-items-center">

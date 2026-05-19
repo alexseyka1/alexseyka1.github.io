@@ -1,7 +1,7 @@
 import { Button } from "@components/ui/Button";
 import Image from "next/image";
 
-export default function MyPhoto() {
+export function MyPhoto() {
   return (
     <div className="container">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -38,10 +38,10 @@ export default function MyPhoto() {
         <div className="order-1 md:order-2">
           <div className="aspect-square">
             <Image
-              src="/img/bw.jpg"
-              width={1000}
-              height={1001}
-              alt="Oleksii Haidai's portrait photo"
+              src="/img/square-photo.jpeg"
+              width={2048}
+              height={2048}
+              alt="Oleksii Haidai's photo"
             />
           </div>
         </div>
