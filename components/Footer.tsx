@@ -1,3 +1,4 @@
+import { NAME } from "@config/contact";
 import Link from "next/link";
 import ContactsList from "./ContactsList";
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="row flex-row-reverse flex-md-row">
           <div className="col-12 col-md">
-            <h5>Oleksii Haidai</h5>
+            <h5>{NAME}</h5>
 
             <ContactsList />
 

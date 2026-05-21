@@ -1,4 +1,4 @@
-import Contact from "../components/main/Contact";
+import { AboutMe } from "@components/main/AboutMe";
 import { MyPhoto } from "../components/main/MyPhoto";
 import Projects from "../components/main/projects/Projects";
 import Skills from "../components/main/Skills";
@@ -8,7 +8,8 @@ export default function Home() {
   return (
     <>
       <MyPhoto />
-      <Contact />
+      <AboutMe />
+      {/* <Contact /> */}
       <Timeline />
       <Projects />
       <Skills />

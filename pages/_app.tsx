@@ -1,3 +1,4 @@
+import { NAME } from "@config/contact";
 import { cn } from "@utils/cn";
 import { AppProps } from "next/app";
 import { Comic_Neue } from "next/font/google";
@@ -22,7 +23,7 @@ function MyApp({
     <>
       <Head>
         <link rel="icon" type="image/png" href="/logo.png" />
-        <title>Oleksii Haidai - Software Engineer</title>
+        <title>{NAME} - Software Engineer</title>
         <meta
           name="description"
           content="I make amazing complex systems that solve business problems and help it grow, as well as easy to use"

@@ -1,10 +1,11 @@
+import { NAME } from "@config/contact";
 import Head from "next/head";
 
 export default function Dok() {
   return (
     <>
       <Head>
-        <title>Oleksii Haidai - Project dok.ua</title>
+        <title>{NAME} - Project dok.ua</title>
         <meta
           name="description"
           content="My first commercial project. Online auto parts store dok.ua."

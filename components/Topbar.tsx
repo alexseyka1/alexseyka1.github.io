@@ -9,7 +9,7 @@ export default function Topbar() {
   return (
     <header className="sticky top-0 backdrop-blur bg-white/85 z-10">
       <nav className="border-b">
-        <div className="container justify-end py-2">
+        <div className="container max-w-6xl! justify-end py-2">
           <div className="flex flex-row justify-between items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}

@@ -1,10 +1,11 @@
+import { NAME } from "@config/contact";
 import Head from "next/head";
 
 export default function SolarServiceGroup() {
   return (
     <>
       <Head>
-        <title>Oleksii Haidai - Project Solar Service Group</title>
+        <title>{NAME} - Project Solar Service Group</title>
         <meta
           name="description"
           content="Affordable installing and maintaining solar panels for everyone."
