@@ -1,17 +1,4 @@
-type ContentBlock = {
-  type: "";
-};
-
-type Project = {
-  name: string;
-  shortLine: string;
-  title: string;
-  description: string;
-  position: string;
-  content: ContentBlock[];
-  website?: string;
-  internetArchiveUrl?: string;
-};
+import { Project } from "./types";
 
 export const PROJECTS: Project[] = [
   {
