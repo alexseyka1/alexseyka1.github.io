@@ -1,136 +1,62 @@
+import { SKILLS } from "@config/skills";
+import { cn } from "@utils/cn";
+import { Database, Globe, Server } from "lucide-react";
+import { motion } from "motion/react";
+
 export default function Skills() {
   return (
-    <section id="skills-and-tools">
-      <div className="container">
-        <h2 className="mt-4 display-5">My skills and tools</h2>
-        <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-4 py-5">
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-html5-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">HTML</div>
-          </div>
+    <div
+      id="skills-and-tools"
+      className={cn(
+        "inset-shadow-[0_-20px_20px_-30px] inset-shadow-mist-300",
+        "bg-mist-50",
+        "flex flex-col justify-center items-center",
+        "bg-[radial-gradient(var(--color-gray-200)_2px,transparent_0)] bg-size-[40px_40px]",
+      )}
+    >
+      <div className="container max-w-6xl! py-24 flex flex-col gap-8 items-center">
+        <h2 className="text-center text-xl backdrop-blur-xl">Skills & Tools</h2>
 
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-css3-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">CSS</div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: "Frontend", icon: Globe, skills: SKILLS.frontend },
+              { title: "Backend", icon: Server, skills: SKILLS.backend },
+              {
+                title: "Tools & DevOps",
+                icon: Database,
+                skills: SKILLS.tools,
+              },
+            ].map((category, i) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white rounded-xl p-8 border hover:ring-2 ring-primary-600 transition-all"
+              >
+                <category.icon className="w-10 h-10 mb-4 text-primary-600" />
+                <h3 className="mb-6 font-semibold">{category.title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, j) => (
+                    <span
+                      key={j}
+                      className="bg-gray-200 px-3 py-1 bg-accent rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-javascript-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">JavaScript</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-typescript-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">TypeScript</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-nodejs-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">Node</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-react-original"></i>
-            </div>
-            <div className="fw-bold mt-3">React & Redux</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-git-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">Git</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-github-original"></i>
-            </div>
-            <div className="fw-bold mt-3">GitHub</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-bitbucket-original"></i>
-            </div>
-            <div className="fw-bold mt-3">Bitbucket</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-php-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">PHP</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-yii-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">Yii framework</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-solid fa-4x fa-gears"></i>
-            </div>
-            <div className="fw-bold mt-3">REST APIs</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-linux-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">Linux</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-mysql-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">MySQL</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-postgresql-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">PostgreSQL</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-brands fa-4x fa-docker"></i>
-            </div>
-            <div className="fw-bold mt-3">Docker & Compose</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-vscode-plain"></i>
-            </div>
-            <div className="fw-bold mt-3">VS Code</div>
-          </div>
-
-          <div className="col d-flex flex-column align-items-center">
-            <div className="text-muted flex-shrink-0">
-              <i className="fa-4x devicon-amazonwebservices-plain-wordmark"></i>
-            </div>
-            <div className="fw-bold mt-3">AWS</div>
-          </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

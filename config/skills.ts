@@ -1,0 +1,31 @@
+export const SKILLS = {
+  frontend: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React & Redux",
+    "Next.js",
+    "Tailwind CSS",
+  ],
+  backend: [
+    "Node.js",
+    "Nest.js",
+    "PHP",
+    "Yii framework",
+    "REST APIs",
+    "MySQL",
+    "PostgreSQL",
+  ],
+  tools: [
+    "Git",
+    "GitHub",
+    "GitLab",
+    "Bitbucket",
+    "Docker",
+    "AWS",
+    "Figma",
+    "CI/CD",
+    "VSCodium",
+  ],
+};

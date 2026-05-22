@@ -56,25 +56,6 @@ const base = {
           950: "#0C111D",
           DEFAULT: "#667085",
         },
-        primary: {
-          25: "#F3F9FA",
-          50: "#E6F1F4",
-          100: "#D5EDF2",
-          200: "#C0E6F0",
-          300: "#99D6E5",
-          400: "#5BB4D4",
-          500: "#2A87B5",
-          600: "#036291",
-          700: "#084D75",
-          800: "#0D3859",
-          900: "#0F253D",
-          950: "#121721",
-          DEFAULT: "#2A87B5",
-          foreground: "#FFFFFF",
-          button: "var(--color-primary-700)",
-          buttonHover: "var(--color-primary-800)",
-          buttonText: "var(--color-primary-foreground)",
-        },
         error: {
           25: "#FFFBFA",
           50: "#FEF3F2",
@@ -152,39 +133,6 @@ const base = {
       },
       spacing: {
         navigation: "var(--navigation-height)",
-      },
-      // Tremor
-      keyframes: {
-        hide: {
-          from: { opacity: "1" },
-          to: { opacity: "0" },
-        },
-        slideDownAndFade: {
-          from: { opacity: "0", transform: "translateY(-6px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-        slideLeftAndFade: {
-          from: { opacity: "0", transform: "translateX(6px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
-        slideUpAndFade: {
-          from: { opacity: "0", transform: "translateY(6px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-        slideRightAndFade: {
-          from: { opacity: "0", transform: "translateX(-6px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
-      },
-      animation: {
-        hide: "hide 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-        slideDownAndFade:
-          "slideDownAndFade 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-        slideLeftAndFade:
-          "slideLeftAndFade 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-        slideUpAndFade: "slideUpAndFade 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-        slideRightAndFade:
-          "slideRightAndFade 150ms cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },

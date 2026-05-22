@@ -5,8 +5,8 @@ type MenuItem = {
 
 export const MENU_ITEMS: MenuItem[] = [
   { label: "Home", href: "/#" },
-  { label: "Contact", href: "/#contact" },
-  { label: "Timeline", href: "/#timeline" },
-  { label: "Projects", href: "/#projects" },
+  { label: "About me", href: "/#about-me" },
   { label: "Skills & Tools", href: "/#skills-and-tools" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Timeline", href: "/timeline" },
 ];

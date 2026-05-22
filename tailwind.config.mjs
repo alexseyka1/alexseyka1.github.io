@@ -17,6 +17,11 @@ const config = {
           800: "#00363F",
           900: "#001F26",
           950: "#001418",
+          DEFAULT: "#008094",
+          foreground: "#FFFFFF",
+          button: "var(--color-primary-600)",
+          buttonHover: "var(--color-primary-800)",
+          buttonText: "var(--color-primary-foreground)",
         },
         secondary: {
           50: "#FFE6DF",

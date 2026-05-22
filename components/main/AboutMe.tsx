@@ -4,8 +4,11 @@ import { motion } from "motion/react";
 
 export function AboutMe() {
   return (
-    <div className="bg-mist-100 border-y-2 border-y-mist-200 inset-shadow-[0_0_50px_-30px] inset-shadow-primary-600/25">
-      <div className="container max-w-7xl! py-24 flex flex-col gap-8 items-center">
+    <div
+      id="about-me"
+      className="bg-mist-100 border-y-2 border-y-mist-200 inset-shadow-[0_0_50px_-30px] inset-shadow-primary-600/25"
+    >
+      <div className="container max-w-6xl! py-24 flex flex-col gap-8 items-center">
         <h2 className="text-center text-xl">About Me</h2>
         <div className="max-w-2xl md:order-1 flex justify-center items-center">
           <DescriptionBlock />

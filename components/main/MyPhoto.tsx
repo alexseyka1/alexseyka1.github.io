@@ -85,7 +85,7 @@ function PhotoBlock() {
         initial={isDesktop && { x: 20, scale: 0.98, rotateZ: 0 }}
         animate={isDesktop && { x: 0, scale: 1, rotateZ: 1 }}
         transition={{ duration: 1.5, ease: "circOut" }}
-        className="rounded-lg overflow-hidden shadow-lg border ring-4 ring-white"
+        className="rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
       >
         <Image
           src="/img/square-photo.jpeg"
