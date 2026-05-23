@@ -1,4 +1,5 @@
 import { PROJECTS } from "@config/projects";
+import { cn } from "@utils/cn";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -19,51 +20,75 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PROJECTS.map((project, i) => (
-              <Link key={i} href={`/project/${project.id}`} passHref>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-white group rounded-xl border ring-4 ring-white hover:ring-2 hover:ring-primary-600 transition-all overflow-hidden shadow-lg relative"
-                >
-                  <div className="aspect-video overflow-hidden relative bg-mist-200">
-                    {project?.thumbnail?.src != null && (
-                      <Image
-                        src={project.thumbnail.src}
-                        width={project.thumbnail.width}
-                        height={project.thumbnail.height}
-                        alt={project.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                        loading="lazy"
-                      />
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <h3 className="mb-2 flex items-center justify-between font-semibold">
-                      {project.name}
-                      <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-3">
-                      {project.description}
-                    </p>
+            {PROJECTS.map((project, i) => {
+              const hasContent = project.content != null;
+              const As = hasContent ? Link : Div;
 
-                    {
-                      /** I could'n figured out where to place these logos... */
-                      // project?.logo?.src != null && (
-                      //   <Image
-                      //     src={project.logo.src}
-                      //     width={project.logo.width}
-                      //     height={project.logo.height}
-                      //     alt={`${project.name} logo`}
-                      //     className="h-10 w-auto absolute bottom-6 left-6"
-                      //     loading="lazy"
-                      //   />
-                      // )
-                    }
+              return (
+                <As key={i} href={`/project/${project.id}`} passHref>
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="bg-white group rounded-xl border ring-4 ring-white hover:ring-2 hover:ring-primary-600 transition-all overflow-hidden shadow-lg relative"
+                  >
+                    <div className="aspect-video overflow-hidden relative bg-mist-200">
+                      {project?.thumbnail?.src != null && (
+                        <Image
+                          src={project.thumbnail.src}
+                          width={project.thumbnail.width}
+                          height={project.thumbnail.height}
+                          alt={project.name}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 pointer-events-none"
+                          loading="lazy"
+                          draggable={false}
+                        />
+                      )}
+                    </div>
+                    <div className="p-6">
+                      <h3 className="mb-2 flex items-center justify-between font-semibold">
+                        <div className="flex items-center gap-2">
+                          {project?.logo?.src != null && (
+                            <Image
+                              src={project.logo.src}
+                              width={project.logo.width}
+                              height={project.logo.height}
+                              alt={`${project.name} logo`}
+                              className={cn(
+                                "h-6 w-auto pointer-events-none",
+                                project.logo.className,
+                              )}
+                              loading="lazy"
+                              draggable={false}
+                            />
+                          )}
+                          {project.name}
+                        </div>
 
-                    {/* <div className="flex flex-wrap gap-2 mt-4">
+                        {hasContent && (
+                          <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        )}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-3">
+                        {project.description}
+                      </p>
+
+                      {
+                        /** I could'n figured out where to place these logos... */
+                        // project?.logo?.src != null && (
+                        //   <Image
+                        //     src={project.logo.src}
+                        //     width={project.logo.width}
+                        //     height={project.logo.height}
+                        //     alt={`${project.name} logo`}
+                        //     className="h-10 w-auto absolute bottom-6 left-6"
+                        //     loading="lazy"
+                        //   />
+                        // )
+                      }
+
+                      {/* <div className="flex flex-wrap gap-2 mt-4">
                       {project.tech.map((tech, j) => (
                           <span
                             key={j}
@@ -73,15 +98,20 @@ export default function Projects() {
                           </span>
                         ))}
                     </div> */}
-                  </div>
-                </motion.div>
-              </Link>
-            ))}
+                    </div>
+                  </motion.div>
+                </As>
+              );
+            })}
           </div>
         </motion.div>
       </div>
     </div>
   );
+
+  function Div({ children }: { children: React.ReactNode }) {
+    return <>{children}</>;
+  }
 
   return (
     <section id="projects">

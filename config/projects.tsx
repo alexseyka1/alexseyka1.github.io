@@ -4,6 +4,7 @@ type Photo = {
   src: string;
   width: number;
   height: number;
+  className?: string;
 };
 
 export type Project = {
@@ -27,20 +28,20 @@ export const PROJECTS: Project[] = [
     name: "Dok.ua",
     position: "Junior PHP developer",
     thumbnail: {
-      src: "/img/projects/dok-bg.jpeg",
+      src: "/img/projects/dok/thumbnail.jpeg",
       width: 1665,
       height: 694,
     },
     logo: {
-      src: "/img/projects/dok-logo-large.svg",
-      width: 120,
-      height: 40,
+      src: "/img/projects/dok/logo.png",
+      width: 57,
+      height: 57,
     },
     timePeriod: <>2015 &mdash; 2017</>,
     shortLine: "My first commercial project",
     title: "Online auto parts store Dok.ua",
     description:
-      "Mainly backend work, internal CRM system. Managing goods and suppliers, filling in the characteristics of goods and much more.",
+      "Leading Ukrainian e-commerce platform specializing in automotive parts, fluids, and accessories",
     website: "https://dok.ua/",
     internetArchiveUrl:
       "http://web.archive.org/web/20170331140647/http://dok.dbroker.com.ua/",
@@ -51,12 +52,12 @@ export const PROJECTS: Project[] = [
     name: "Solar Service Group",
     position: "Full Stack Developer",
     thumbnail: {
-      src: "/img/projects/ssg-bg.jpeg",
+      src: "/img/projects/ssg/thumbnail.jpeg",
       width: 1500,
       height: 430,
     },
     logo: {
-      src: "/img/projects/ssg-logo.jpeg",
+      src: "/img/projects/ssg/logo.jpeg",
       width: 250,
       height: 250,
     },
@@ -64,7 +65,7 @@ export const PROJECTS: Project[] = [
     shortLine: "Solar panels installation and maintenance",
     title: "Solar Service Group",
     description:
-      "A large CRM system for a company engaged in the sale, installation and maintenance of solar panels, in which integration with third-party services via API was important.",
+      "Trusted Australian company that specialise in solar battery storage solutions, service, maintenance and repairs of PV solar systems nationally.",
     website: "https://solarservicegroup.com.au/",
     internetArchiveUrl:
       "https://web.archive.org/web/20170217064645/http://solarservicegroup.com.au/",
@@ -75,12 +76,12 @@ export const PROJECTS: Project[] = [
     name: "Rush HQ",
     position: "Full Stack Developer",
     thumbnail: {
-      src: "/img/projects/rushhq-bg.jpeg",
+      src: "/img/projects/rush-hq/thumbnail.jpeg",
       width: 1200,
       height: 800,
     },
     logo: {
-      src: "/img/projects/rushhq-logo.png",
+      src: "/img/projects/rush-hq/logo.png",
       width: 345,
       height: 200,
     },
@@ -88,7 +89,7 @@ export const PROJECTS: Project[] = [
     shortLine: "And it’s not just about trampolines",
     title: "Melbourne’s premier indoor adventure park.",
     description:
-      "Development and improvement of the booking system, as well as work on the internal system.",
+      "Melbourne’s premier, large-scale indoor adventure park in Rowville, Melbourne, offering over 100+ interconnected trampolines, a high-ropes course, climbing walls, and a ninja warrior course.",
     website: "https://www.rushhq.com.au/",
     internetArchiveUrl:
       "https://web.archive.org/web/20200305022901/https://reservations.rushhq.com.au/party?pid=&h=",
@@ -99,55 +100,119 @@ export const PROJECTS: Project[] = [
     name: "Enertek",
     position: "Full Stack Developer",
     thumbnail: {
-      src: "/img/projects/enertek-bg.jpeg",
-      width: 800,
-      height: 800,
+      src: "/img/projects/enertek/device.png",
+      width: 1242,
+      height: 1215,
     },
     logo: {
-      src: "/img/projects/enertek-logo.svg",
+      src: "/img/projects/enertek/logo.svg",
       width: 150,
       height: 150,
+      className: "bg-gray-800 rounded-full",
     },
     timePeriod: <>2019 &mdash; 2024</>,
+    shortLine: "Built-in intelligence at your fingertips",
+    title: "Power you can count on.",
+    description:
+      "Software allowed you to control energy usage and solar production from anywhere around the world. Become more energy independent and make important lifestyle or financial decisions in real-time, anytime.",
+    // website: "",
+    internetArchiveUrl:
+      "https://web.archive.org/web/20230609151311/https://energizerhomepower.com/",
+    content: null,
   },
   {
     id: "warrp-it",
     name: "Warrp.it",
     position: "Full Stack Developer",
     thumbnail: {
-      src: "/img/projects/warrp-bg.jpeg",
+      src: "/img/projects/warrp/screenshot.png",
       width: 1000,
       height: 500,
     },
     logo: {
-      src: "/img/projects/warrp-logo-circle.png",
+      src: "/img/projects/warrp/logo-circle.png",
       width: 150,
       height: 150,
     },
     timePeriod: <>2020 &mdash; 2021</>,
+    // shortLine: "",
+    // title: "",
+    description:
+      "iOS marketplace app based on an end-to-end design to make it S.A.F.E. for everyone. Buyers and sellers can Securely transact while the rest of the community plays an Active role in ensuring prices are Fair...",
+    // website: "",
+    internetArchiveUrl:
+      "https://web.archive.org/web/20210716062155/https://warrp.it/",
+    // content: "",
   },
   {
     id: "racer-club",
     name: "Racer Club",
     position: "Web3 Developer",
-    // thumbnailUrl: "",
-    // logoUrl: "",
+    thumbnail: {
+      src: "/img/projects/racer-club/thumbnail.png",
+      width: 1594,
+      height: 897,
+    },
+    logo: {
+      src: "/img/projects/racer-club/logo.png",
+      width: 500,
+      height: 500,
+    },
     timePeriod: "2023",
+    // shortLine: "",
+    // title: "",
+    description:
+      "Multiplayer racing game built with Unreal Engine 5 for Racer Club GameFi platform.",
+    // website: "",
+    internetArchiveUrl:
+      "https://web.archive.org/web/20230410175530/https://racerclub.game/",
+    // content: "",
   },
   {
     id: "hyperian",
     name: "Hyperian",
     position: "Senior Full Stack Developer",
-    // thumbnailUrl: "",
-    // logoUrl: "",
+    thumbnail: {
+      src: "/img/projects/hyperian/thumbnail.png",
+      width: 2502,
+      height: 2200,
+    },
+    logo: {
+      src: "/img/projects/hyperian/logo-dark.svg",
+      width: 64,
+      height: 64,
+    },
     timePeriod: <>2023 &mdash; 2024</>,
+    // shortLine: "",
+    // title: "",
+    description:
+      "Secure and powerful cloud-based operational software suite, enabling partners to monitor, control and manage the overall fleet, effectively onboard installers, and support the end-users providing a seamless experience across the Hyperian product range.",
+    website: "https://hyperian.com/",
+    internetArchiveUrl:
+      "https://web.archive.org/web/20241006135509/https://hyperian.com/",
+    // content: "",
   },
   {
-    id: "german",
-    name: "German client",
+    id: "german-client",
+    name: "German B2B client",
     position: "Senior Full Stack Developer",
-    // thumbnailUrl: "",
-    // logoUrl: "",
+    thumbnail: {
+      src: "/img/projects/german-client/landscape.jpg",
+      width: 6016,
+      height: 4000,
+    },
+    logo: {
+      src: "/img/projects/german-client/windmill.jpeg",
+      width: 594,
+      height: 594,
+    },
     timePeriod: <>2025 &mdash; 2026</>,
+    // shortLine: "",
+    // title: "",
+    description:
+      "Intelligent B2B platform that connects Europe’s leading renewable power producers with enterprises committed to reducing their carbon footprint.",
+    // website: "",
+    // internetArchiveUrl: "",
+    // content: "",
   },
 ];
