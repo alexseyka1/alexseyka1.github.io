@@ -30,9 +30,9 @@ export function ProjectLayout({ project, children }: Props) {
             <div className="order-1 md:order-2 pt-5 md:py-8 flex justify-center items-center">
               <PhotoBlock
                 title={project.title}
-                src="/img/projects/dok/website.png"
-                width={2000}
-                height={1200}
+                src={project.detailsImage.src}
+                width={project.detailsImage.width}
+                height={project.detailsImage.height}
               />
             </div>
           </div>
@@ -51,6 +51,7 @@ function DescriptionBlock({
   position,
   website,
   internetArchiveUrl,
+  timePeriod,
 }: Pick<
   Project,
   | "shortLine"
@@ -59,6 +60,7 @@ function DescriptionBlock({
   | "position"
   | "website"
   | "internetArchiveUrl"
+  | "timePeriod"
 >) {
   return (
     <motion.div

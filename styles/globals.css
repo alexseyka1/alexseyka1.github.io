@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "react-medium-image-zoom/dist/styles.css";
 @config "../tailwind.config.mjs";
 
 /* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"); */

@@ -1,7 +1,17 @@
+import { ProjectLayout } from "@components/layouts/ProjectLayout";
+import Skills from "@components/main/Skills";
+import { TextSection } from "@components/TextSection";
 import { NAME } from "@config/contact";
+import { PROJECTS } from "@config/projects";
 import Head from "next/head";
+import Image from "next/image";
+import Zoom from "react-medium-image-zoom";
+
+const project = PROJECTS.find(({ id }) => id === "rush-hq");
 
 export default function SolarServiceGroup() {
+  if (!project) return;
+
   return (
     <>
       <Head>
@@ -12,54 +22,8 @@ export default function SolarServiceGroup() {
         />
       </Head>
 
-      <section>
-        <div className="container">
-          <div className="row flex-md-row-reverse justify-content-center align-items-center g-5">
-            <div
-              className="col-md-6 col-lg-6 shadow-lg rounded introducing-photo-column"
-              style={{
-                backgroundImage: "url(/img/projects/rush-hq/website.png)",
-                backgroundPositionX: 0,
-              }}
-            ></div>
-            <div className="col-md-6 col-lg-6">
-              And it&apos;s not just about trampolines
-              <h1 className="display-5 fw-bold lh-1">
-                Melbourne’s premier indoor adventure park.
-              </h1>
-              <p className="fs-5 text-muted mb-3">as Full Stack developer</p>
-              <p className="lead py-2">
-                Development and improvement of the booking system, as well as
-                work on the internal system.
-              </p>
-              <div className="d-grid d-lg-flex justify-content-stretch">
-                <a
-                  href="https://www.rushhq.com.au/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-primary btn-lg px-4 me-lg-2"
-                >
-                  View website
-                </a>
-                <a
-                  href="https://web.archive.org/web/20200305022901/https://reservations.rushhq.com.au/party?pid=&h="
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-outline-secondary btn-lg px-4 mt-2 mt-lg-0"
-                >
-                  <i className="fa-solid fa-clock-rotate-left"></i> Internet
-                  Archive
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="timeline">
-        <div className="container">
-          <h2 className="mt-4 display-5">How it was?</h2>
-
+      <ProjectLayout project={project}>
+        <TextSection title="How it was?" className="border-none border-y">
           <p>
             Working on the booking system for Rush HQ turned out to be one of
             those projects where every piece looks simple on its own - until you
@@ -72,18 +36,17 @@ export default function SolarServiceGroup() {
             parties.
           </p>
 
-          <a
-            href="/img/projects/rush-hq/trampoline-hall.png"
-            target="_blank"
-            title="Solar Service Group admin panel"
-          >
-            <img
+          <Zoom zoomImg={{ src: "/img/projects/rush-hq/trampoline-hall.png" }}>
+            <Image
               src="/img/projects/rush-hq/trampoline-hall.png"
-              className="float-end ms-3 shadow timeline-image"
+              width={1200}
+              height={800}
+              className="float-end ms-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
+              alt="Rush Trampoline Hall"
             />
-          </a>
+          </Zoom>
 
-          <p>
+          <p className="mt-4">
             I was responsible for designing and developing the booking logic -
             the part that decides who can book what, when, and how. On top of
             basic scheduling, guests could add extra products and services when
@@ -92,7 +55,8 @@ export default function SolarServiceGroup() {
             discount-coupon system with limits per usage, per person, and even
             per product - and things got complex quickly.
           </p>
-          <p>
+
+          <p className="mt-4">
             One of the biggest challenges was optimizing how groups were
             allocated to halls. The goal was to fill spaces efficiently without
             causing overbooking or leaving awkward gaps that made later
@@ -101,31 +65,25 @@ export default function SolarServiceGroup() {
             combinations that left the least unused capacity while respecting
             all the hall restrictions and time slots.
           </p>
-          <p>
+
+          <p className="mt-4">
             We also had to make sure cancellations worked smoothly - when
             someone canceled, their slot needed to become available again
             immediately, without breaking ongoing group allocations or
             overlapping schedules.
           </p>
-          <p>
+
+          <p className="mt-4">
             In the end, the system became both flexible and smart enough to
             handle the park&apos;s real-world complexities - from a small group
             of kids jumping around to a big corporate team event spanning half
             the building. It was one of those projects where backend logic
             turned out to be just as adventurous as the attraction itself.
           </p>
-        </div>
-      </section>
+        </TextSection>
 
-      <section>
-        <div className="container">
-          <h2 className="mt-4 display-5">Achievements</h2>
-
-          <span className="fa-stack fa-1x float-start text-primary opacity-50 m-2">
-            <i className="fa-solid fa-circle fa-stack-2x"></i>
-            <i className="fa-solid fa-1 fa-stack-1x fa-inverse"></i>
-          </span>
-          <p className="mb-0">User experience:</p>
+        <TextSection title="Achievements" className="bg-white border-y">
+          <p>User experience:</p>
           <p>
             The booking interface was redesigned to make date and time selection
             extremely simple and intuitive. Visitors could immediately see
@@ -134,33 +92,24 @@ export default function SolarServiceGroup() {
             process feel effortless for first-time users.
           </p>
 
-          <a
-            href="/img/projects/rush-hq/reservations.png"
-            target="_blank"
-            title="Reservations page"
-          >
-            <img
+          <Zoom zoomImg={{ src: "/img/projects/rush-hq/reservations.png" }}>
+            <Image
               src="/img/projects/rush-hq/reservations.png"
-              className="float-end ms-3 shadow timeline-image"
+              width={2048}
+              height={2880}
+              className="float-end ms-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
+              alt="Reservations page"
             />
-          </a>
+          </Zoom>
 
-          <span className="fa-stack fa-1x float-start text-primary opacity-50 m-2">
-            <i className="fa-solid fa-circle fa-stack-2x"></i>
-            <i className="fa-solid fa-2 fa-stack-1x fa-inverse"></i>
-          </span>
-          <p className="mb-0">Performance improvements:</p>
+          <p className="mt-4">Performance improvements:</p>
           <p>
             Booking data was strategically cached to keep response times very
             short, even during peak hours. This made the overall user flow feel
             smoother and significantly reduced server load.
           </p>
 
-          <span className="fa-stack fa-1x float-start text-primary opacity-50 m-2">
-            <i className="fa-solid fa-circle fa-stack-2x"></i>
-            <i className="fa-solid fa-3 fa-stack-1x fa-inverse"></i>
-          </span>
-          <p className="mb-0">Business impact:</p>
+          <p className="mt-4">Business impact:</p>
           <p>
             With fewer booking errors and better hall utilization (higher
             occupancy at any given time), the venue’s overall revenue increased.
@@ -169,11 +118,7 @@ export default function SolarServiceGroup() {
             spike in secondary sales.
           </p>
 
-          <span className="fa-stack fa-1x float-start text-primary opacity-50 m-2">
-            <i className="fa-solid fa-circle fa-stack-2x"></i>
-            <i className="fa-solid fa-4 fa-stack-1x fa-inverse"></i>
-          </span>
-          <p className="mb-0">Code structure and reusability:</p>
+          <p className="mt-4">Code structure and reusability:</p>
           <p>
             We reused existing components wherever possible and created new
             generic ones when necessary. This made the system modular and easier
@@ -181,11 +126,7 @@ export default function SolarServiceGroup() {
             features.
           </p>
 
-          <span className="fa-stack fa-1x float-start text-primary opacity-50 m-2">
-            <i className="fa-solid fa-circle fa-stack-2x"></i>
-            <i className="fa-solid fa-5 fa-stack-1x fa-inverse"></i>
-          </span>
-          <p className="mb-0">Database optimization:</p>
+          <p className="mt-4">Database optimization:</p>
           <p>
             Large, heavy tables were split into smaller and normalized ones,
             improving clarity and logic of data organization. For high-demand
@@ -193,56 +134,18 @@ export default function SolarServiceGroup() {
             sped up complex queries and improved overall scalability.
           </p>
 
-          <p className="border-top pt-3">
+          <p className="mt-4">
             This project ended up being a full-stack lesson in how real-world
             data and user behavior can be balanced through both engineering and
             UX — and how making booking “simple” for users often means solving
             something very complex underneath.
           </p>
-        </div>
-      </section>
+        </TextSection>
 
-      <section id="skills-and-tools">
-        <div className="container">
-          <h2 className="mt-4 display-5">Project tools</h2>
-          <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-4 py-5">
-            <div className="col d-flex flex-column align-items-center">
-              <div className="text-muted flex-shrink-0">
-                <i className="fa-4x devicon-php-plain"></i>
-              </div>
-              <div className="fw-bold mt-3">PHP 5.6</div>
-            </div>
-
-            <div className="col d-flex flex-column align-items-center">
-              <div className="text-muted flex-shrink-0">
-                <i className="fa-4x devicon-yii-plain"></i>
-              </div>
-              <div className="fw-bold mt-3">Yii 1</div>
-            </div>
-
-            <div className="col d-flex flex-column align-items-center">
-              <div className="text-muted flex-shrink-0">
-                <i className="fa-4x devicon-jquery-plain"></i>
-              </div>
-              <div className="fw-bold mt-3">jQuery</div>
-            </div>
-
-            <div className="col d-flex flex-column align-items-center">
-              <div className="text-muted flex-shrink-0">
-                <i className="fa-4x devicon-mysql-plain"></i>
-              </div>
-              <div className="fw-bold mt-3">MySQL 5.7</div>
-            </div>
-
-            <div className="col d-flex flex-column align-items-center">
-              <div className="text-muted flex-shrink-0">
-                <i className="fa-4x devicon-vuejs-plain"></i>
-              </div>
-              <div className="fw-bold mt-3">Vue</div>
-            </div>
-          </div>
-        </div>
-      </section>
+        {project.skills != null && (
+          <Skills title="Technology Stack" skills={project.skills} />
+        )}
+      </ProjectLayout>
     </>
   );
 }

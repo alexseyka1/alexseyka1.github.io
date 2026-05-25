@@ -13,6 +13,7 @@ export type Project = {
   name: string;
   thumbnail: Photo;
   logo: Photo;
+  detailsImage: Photo;
   timePeriod: React.ReactNode;
   shortLine: string;
   title: string;
@@ -39,6 +40,11 @@ export const PROJECTS: Project[] = [
       width: 57,
       height: 57,
     },
+    detailsImage: {
+      src: "/img/projects/dok/website.png",
+      width: 2000,
+      height: 1200,
+    },
     timePeriod: <>2015 &mdash; 2017</>,
     shortLine: "My first commercial project",
     title: "Online auto parts store Dok.ua",
@@ -48,9 +54,16 @@ export const PROJECTS: Project[] = [
     internetArchiveUrl:
       "http://web.archive.org/web/20170331140647/http://dok.dbroker.com.ua/",
     skills: {
-      backend: ["PHP 5.6", "Yii 1", "MySQL 5.7"],
-      frontend: ["HTML", "CSS", "JavaScript", "jQuery", "Angular 2"],
-      tools: ["Git", "GitHub"],
+      backend: ["PHP 5.6", "Yii 1", "MySQL 5.7", "Sphinx Search"],
+      frontend: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Angular 2",
+        "Bootstrap 3",
+      ],
+      tools: ["Git", "GitHub", "Sublime Text 2"],
     },
     hasContent: true,
   },
@@ -68,15 +81,32 @@ export const PROJECTS: Project[] = [
       width: 250,
       height: 250,
     },
+    detailsImage: {
+      src: "/img/projects/ssg/website.png",
+      width: 1000,
+      height: 625,
+    },
     timePeriod: <>2017 &mdash; 2022</>,
-    shortLine: "Solar panels installation and maintenance",
+    shortLine: "My first foreign project",
     title: "Solar Service Group",
     description:
       "Trusted Australian company that specialise in solar battery storage solutions, service, maintenance and repairs of PV solar systems nationally.",
     website: "https://solarservicegroup.com.au/",
     internetArchiveUrl:
       "https://web.archive.org/web/20170217064645/http://solarservicegroup.com.au/",
-    content: null,
+    skills: {
+      backend: ["PHP 5.6", "Yii 1", "MySQL 5.7"],
+      frontend: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Vue.js",
+        "Bootstrap 3",
+      ],
+      tools: ["Git", "Bitbucket"],
+    },
+    hasContent: true,
   },
   {
     id: "rush-hq",
@@ -92,6 +122,11 @@ export const PROJECTS: Project[] = [
       width: 345,
       height: 200,
     },
+    detailsImage: {
+      src: "/img/projects/rush-hq/website.png",
+      width: 5120,
+      height: 2880,
+    },
     timePeriod: <>2018 &mdash; 2023</>,
     shortLine: "And it’s not just about trampolines",
     title: "Melbourne’s premier indoor adventure park.",
@@ -100,7 +135,19 @@ export const PROJECTS: Project[] = [
     website: "https://www.rushhq.com.au/",
     internetArchiveUrl:
       "https://web.archive.org/web/20200305022901/https://reservations.rushhq.com.au/party?pid=&h=",
-    content: null,
+    skills: {
+      backend: ["PHP 5.6", "Yii 1", "MySQL 5.7"],
+      frontend: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Vue.js",
+        "Bootstrap 3",
+      ],
+      tools: ["Git", "Bitbucket"],
+    },
+    hasContent: true,
   },
   {
     id: "enertek",
