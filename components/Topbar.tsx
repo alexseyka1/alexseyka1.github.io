@@ -33,11 +33,7 @@ export default function Topbar() {
 
 function DesktopMenu() {
   return (
-    <ul
-      className={cn(
-        "hidden md:flex flex-col md:flex-row md:mb-0 md:justify-center md:items-center",
-      )}
-    >
+    <ul className="hidden md:flex flex-col md:flex-row md:mb-0 md:justify-center md:items-center">
       {MENU_ITEMS.map(({ label, href }) => (
         <li key={label}>
           <Link href={href} passHref>

@@ -1,4 +1,5 @@
 import React from "react";
+import { SKILLS } from "./skills";
 
 type Photo = {
   src: string;
@@ -19,7 +20,8 @@ export type Project = {
   position: string;
   website?: string;
   internetArchiveUrl?: string;
-  content: React.ReactNode;
+  skills?: typeof SKILLS;
+  hasContent?: boolean;
 };
 
 export const PROJECTS: Project[] = [
@@ -45,7 +47,12 @@ export const PROJECTS: Project[] = [
     website: "https://dok.ua/",
     internetArchiveUrl:
       "http://web.archive.org/web/20170331140647/http://dok.dbroker.com.ua/",
-    content: null,
+    skills: {
+      backend: ["PHP 5.6", "Yii 1", "MySQL 5.7"],
+      frontend: ["HTML", "CSS", "JavaScript", "jQuery", "Angular 2"],
+      tools: ["Git", "GitHub"],
+    },
+    hasContent: true,
   },
   {
     id: "solar-service-group",

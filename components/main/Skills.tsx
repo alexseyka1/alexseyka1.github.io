@@ -3,7 +3,12 @@ import { cn } from "@utils/cn";
 import { Database, Globe, Server } from "lucide-react";
 import { motion } from "motion/react";
 
-export default function Skills() {
+type Props = {
+  title: string;
+  skills: typeof SKILLS;
+};
+
+export default function Skills({ title, skills }: Props) {
   return (
     <div
       id="skills-and-tools"
@@ -15,7 +20,7 @@ export default function Skills() {
       )}
     >
       <div className="container max-w-6xl! py-24 flex flex-col gap-8 items-center">
-        <h2 className="text-center text-xl backdrop-blur-xl">Skills & Tools</h2>
+        <h2 className="text-center text-xl backdrop-blur-xl">{title}</h2>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -24,12 +29,12 @@ export default function Skills() {
         >
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Frontend", icon: Globe, skills: SKILLS.frontend },
-              { title: "Backend", icon: Server, skills: SKILLS.backend },
+              { title: "Frontend", icon: Globe, skills: skills.frontend },
+              { title: "Backend", icon: Server, skills: skills.backend },
               {
                 title: "Tools & DevOps",
                 icon: Database,
-                skills: SKILLS.tools,
+                skills: skills.tools,
               },
             ].map((category, i) => (
               <motion.div

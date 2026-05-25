@@ -17,7 +17,7 @@ export function MyPhoto() {
     >
       <div className="container max-w-6xl!">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
-          <div className="order-2 md:order-1 flex justify-center items-center pb-12 md:p-12">
+          <div className="order-2 md:order-1 flex justify-center items-center pb-12 md:p-12 pl-0!">
             <DescriptionBlock />
           </div>
 

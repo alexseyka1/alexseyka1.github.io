@@ -1,112 +1,157 @@
-import { NAME } from "@config/contact";
+import { NAME, SOCIAL_LINKS } from "@config/contact";
+import { MENU_ITEMS } from "@config/menu";
+import { PROJECTS } from "@config/projects";
+import { cn } from "@utils/cn";
+import { motion } from "motion/react";
 import Link from "next/link";
-import ContactsList from "./ContactsList";
+
 export default function Footer() {
   return (
-    <footer className="bg-dark text-light py-5 main-footer">
-      <div className="container">
-        <div className="row flex-row-reverse flex-md-row">
-          <div className="col-12 col-md">
-            <h5>{NAME}</h5>
+    <footer
+      className={cn(
+        "bg-mist-800 text-mist-50",
+        "flex flex-col justify-center items-center",
+        "bg-[radial-gradient(var(--color-gray-800)_2px,transparent_0)] bg-size-[40px_40px]",
+      )}
+    >
+      <div className="container max-w-2xl! py-24 flex flex-col gap-8 items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="w-full flex flex-col gap-8"
+        >
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <h3 className="mb-6 font-semibold">{NAME}</h3>
+              <ul className="flex flex-col gap-2">
+                {SOCIAL_LINKS.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      passHref
+                      className="text-mist-400 hover:text-mist-50"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-            <ContactsList />
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <h3 className="mb-6 font-semibold">Sections</h3>
+              <ul className="flex flex-col gap-2">
+                {MENU_ITEMS.map(({ label, href }) => (
+                  <li key={label}>
+                    <Link
+                      href={href}
+                      passHref
+                      className="text-mist-400 hover:text-mist-50"
+                    >
+                      <span>{label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-            <div className="mt-2">
-              <small className="d-block mb-3 text-muted">
-                © {new Date().getFullYear()}
-              </small>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <h3 className="mb-6 font-semibold">Projects</h3>
+              <ul className="flex flex-col gap-2">
+                {PROJECTS.map((project) => {
+                  const hasContent = project.content != null;
+                  const As = hasContent ? Link : Div;
+
+                  return (
+                    <li key={project.id} className="text-mist-400">
+                      {hasContent ? (
+                        <Link
+                          href={`/projects/${project.id}`}
+                          passHref
+                          className="hover:text-mist-50"
+                        >
+                          {project.name}
+                        </Link>
+                      ) : (
+                        <div>{project.name}</div>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </footer>
+  );
+
+  return (
+    <footer
+      className={cn(
+        "inset-shadow-[0_-20px_20px_-30px] inset-shadow-mist-300",
+        "bg-mist-800 text-mist-50",
+        "flex flex-col justify-center items-center",
+        "bg-[radial-gradient(var(--color-gray-800)_2px,transparent_0)] bg-size-[40px_40px]",
+      )}
+    >
+      <div className="container max-w-6xl! py-24 flex flex-col gap-8 items-center">
+        <h2 className="text-center text-xl">About Me</h2>
+        <div className="w-full max-w-2xl md:order-1 flex justify-center items-center">
+          <div className="w-full flex flex-row justify-between items-start">
+            <div className="flex flex-col gap-8">
+              <h5 className="text-xl">Sections</h5>
+              <ul className="flex flex-col justify-center items-start">
+                {MENU_ITEMS.map(({ label, href }) => (
+                  <li key={label}>
+                    <Link href={href} passHref>
+                      <span className="">{label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
 
-          <div className="col-6 col-md">
-            <h5>Sections</h5>
-            <ul className="list-unstyled text-small">
-              <li className="mb-1">
-                <Link href="/#">
-                  <span className="link-secondary text-decoration-none">
-                    My photo
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/#timeline">
-                  <span className="link-secondary text-decoration-none">
-                    Timeline
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/#projects">
-                  <span className="link-secondary text-decoration-none">
-                    Projects
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/#skills-and-tools">
-                  <span className="link-secondary text-decoration-none">
-                    Skills & Tools
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/#contact">
-                  <span className="link-secondary text-decoration-none">
-                    Contact
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-6 col-md">
-            <h5>Projects</h5>
-            <ul className="list-unstyled text-small">
-              <li className="mb-1">
-                <Link href="/projects/dok">
-                  <span className="link-secondary text-decoration-none">
-                    Dok.ua
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/projects/solar-service-group">
-                  <span className="link-secondary text-decoration-none">
-                    Solar Service Group
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/projects/rush-hq">
-                  <span className="link-secondary text-decoration-none">
-                    Rush HQ
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/projects/enertek">
-                  <span className="link-secondary text-decoration-none">
-                    Enertek
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/projects/warrpit">
-                  <span className="link-secondary text-decoration-none">
-                    Warrp.it
-                  </span>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/projects/other-crm">
-                  <span className="link-secondary text-decoration-none">
-                    Other CRM systems
-                  </span>
-                </Link>
-              </li>
-            </ul>
+            <div className="flex flex-col gap-8">
+              <h5 className="text-xl">Projects</h5>
+              <ul>
+                {PROJECTS.map((project) => {
+                  const hasContent = project.content != null;
+                  const As = hasContent ? Link : Div;
+
+                  return (
+                    <li key={project.id}>
+                      <As href={`/projects/${project.id}`} passHref>
+                        {project.name}
+                      </As>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </footer>
   );
+}
+
+function Div({ children, ...props }: { children: React.ReactNode }) {
+  return <span {...props}>{children}</span>;
 }
