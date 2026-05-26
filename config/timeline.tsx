@@ -311,11 +311,10 @@ export const TIMELINE: TimelineItem[] = [
           and upward throughout our collaboration.
         </p>
         <p className="mt-4">
-          I really liked that there was no hierarchy of management within the
-          team and everyone communicated freely and at the same level. It turned
-          out that German sounds quite interesting. I even studied German on
-          Duolingo for a while; my partner didn't realize it was too difficult a
-          language to learn from scratch.
+          I really liked that there was no management hierarchy within the team,
+          and everyone communicated freely and equally. It turned out that
+          German sounds quite interesting. I even studied German on Duolingo for
+          a while until I realized it was too difficult to learn from scratch.
         </p>
         <p className="mt-4">
           But time moves on, and new ambitious goals arise in business,
