@@ -6,7 +6,7 @@ export default function TimelinePage() {
   return (
     <>
       <Head>
-        <title>{NAME} - Timeline</title>
+        <title>{`${NAME} - Timeline`}</title>
         <meta name="description" content="Timeline of my experience" />
       </Head>
       <Timeline />

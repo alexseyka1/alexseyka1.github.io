@@ -16,11 +16,8 @@ export default function Dok() {
   return (
     <>
       <Head>
-        <title>{NAME} - Project dok.ua</title>
-        <meta
-          name="description"
-          content="My first commercial project. Online auto parts store dok.ua."
-        />
+        <title>{`${NAME} - Project ${project.name}`}</title>
+        <meta name="description" content={project.description} />
       </Head>
 
       <ProjectLayout project={project}>

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
@@ -15,13 +16,20 @@ export const TIMELINE: TimelineItem[] = [
     content: (
       <>
         <Zoom zoomImg={{ src: "/img/html-frames.jpg" }}>
-          <Image
-            src="/img/html-frames.jpg"
-            width={977}
-            height={506}
-            className="float-end ms-8 mb-8! timeline-image rounded overflow-hidden shadow-lg border ring-4 ring-white"
-            alt="HTML frames example"
-          />
+          <motion.div
+            initial={{ x: 20, scale: 0.98 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ delay: 0.2, ease: "circOut" }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src="/img/html-frames.jpg"
+              width={977}
+              height={506}
+              className="float-end ms-8 mb-8! timeline-image rounded overflow-hidden shadow-lg border ring-4 ring-white"
+              alt="HTML frames example"
+            />
+          </motion.div>
         </Zoom>
 
         <p>
@@ -32,6 +40,7 @@ export const TIMELINE: TimelineItem[] = [
             target="_blank"
             rel="noreferrer"
             title="Net Speakerphone"
+            className="text-primary underline underline-offset-4 hover:no-underline"
           >
             Net Speakerphone
           </a>{" "}
@@ -41,6 +50,7 @@ export const TIMELINE: TimelineItem[] = [
             target="_blank"
             rel="noreferrer"
             title="mIRC"
+            className="text-primary underline underline-offset-4 hover:no-underline"
           >
             mIRC
           </a>
@@ -52,16 +62,19 @@ export const TIMELINE: TimelineItem[] = [
         </p>
         <p>
           One of the chat participants praised me and told me to keep learning
-          website development. He told me what I can do with PHP, gave me the{" "}
+          website development. He told me what kind of things I could do with
+          PHP, gave me the{" "}
           <a
             href="https://museum.php.net/php3/"
             target="_blank"
             rel="noreferrer"
             title="manual for PHP 3"
+            className="text-primary underline underline-offset-4 hover:no-underline"
           >
             manual for PHP 3
           </a>{" "}
-          and advised me to learn it. What I have devoted all my free time to.
+          and advised me to learn it. That became the thing I have spent all my
+          spare time to.
         </p>
       </>
     ),
@@ -73,18 +86,24 @@ export const TIMELINE: TimelineItem[] = [
       <p>
         The first large-scale project, as it seemed to me then, I completed at
         the university in 2012. It was a system of recording scientific
-        publications. In it, I already used the CSS framework - Bootstrap, and
-        used MySQL for data storage. Thanks to{" "}
+        publications. My teacher announced that a few first semesters we would
+        be building this system using C# for educational reasons. But at the
+        time I found myself more clever, and not seeing any reasons why I should
+        learn something new to solve this challenge, I spent a few nights and
+        implemented this project. But it was built on top of PHP, CSS framework
+        - Bootstrap, and used MySQL for data storage. Thanks to{" "}
         <a
           href="http://www.denwer.ru/"
           target="_blank"
           rel="noreferrer"
           title="Denwer"
+          className="text-primary underline underline-offset-4 hover:no-underline"
         >
           Denwer
         </a>{" "}
-        that everything was already out of the box and I didn’t have to
-        configure anything myself.
+        that everything was already out of the box and I didn&apos;t have to
+        configure anything myself. Of course, this my implementation was
+        rejected.
       </p>
     ),
   },
@@ -94,26 +113,35 @@ export const TIMELINE: TimelineItem[] = [
     content: (
       <>
         <Zoom zoomImg={{ src: "/img/dok.jpg" }}>
-          <Image
-            src="/img/dok.jpg"
-            width={1000}
-            height={562}
-            className="float-start me-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
-            alt="Dok.ua the online auto parts store"
-            title="My business card"
-          />
+          <motion.div
+            initial={{ x: -20, scale: 0.98 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ delay: 0.2, ease: "circOut" }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src="/img/dok.jpg"
+              width={1000}
+              height={562}
+              className="float-start me-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
+              alt="Dok.ua the online auto parts store"
+              title="My business card"
+            />
+          </motion.div>
         </Zoom>
 
         <p>
-          Having moved to a big city in 2015, I needed to find a job, but all I
-          could do was develop quite a bit. That`s how I found my first job as a
-          junior developer in the online auto parts store{" "}
+          I moved to a big city in 2015. I needed to find a job, but at that
+          point, all I could do was websites development. That&apos;s how I
+          found my first job as a junior developer in the online auto parts
+          store{" "}
           <Link href="/projects/dok">
             <span title="dok.ua">dok.ua</span>
           </Link>
-          . There I first got acquainted with the PHP framework Yii. Thanks to
-          wise mentors, I learned how to build complex queries in MySQL, write
-          parsers, work with task trackers and work in a team.
+          . There, I was dealing with the PHP framework Yii for the first time.
+          Thanks to wise mentors, I learned how to build complex queries in
+          MySQL, write scrapers and data parsers, work with task trackers and
+          work in a team.
         </p>
 
         <p className="mt-4">
@@ -137,6 +165,7 @@ export const TIMELINE: TimelineItem[] = [
           target="_blank"
           rel="noreferrer"
           title="Aussiedev"
+          className="text-primary underline underline-offset-4 hover:no-underline"
         >
           Aussiedev
         </a>{" "}
@@ -153,21 +182,28 @@ export const TIMELINE: TimelineItem[] = [
     content: (
       <>
         <Zoom zoomImg={{ src: "/img/leemon.jpg" }}>
-          <Image
-            src="/img/leemon.jpg"
-            width={1000}
-            height={562}
-            className="float-end ms-8 mb-8! timeline-image rounded overflow-hidden shadow-lg border ring-4 ring-white"
-            title="Leemon.com.ua store website"
-            alt="Leemon.com.ua launch my own online sports equipment store"
-          />
+          <motion.div
+            initial={{ x: 20, scale: 0.98 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ delay: 0.2, ease: "circOut" }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src="/img/leemon.jpg"
+              width={1000}
+              height={562}
+              className="float-end ms-8 mb-8! timeline-image rounded overflow-hidden shadow-lg border ring-4 ring-white"
+              title="Leemon.com.ua store website"
+              alt="Leemon.com.ua launch my own online sports equipment store"
+            />
+          </motion.div>
         </Zoom>
         <p>
           I left the first company because I didn`t see further growth. I tried
           to launch my own online sports equipment store, developed a website,
-          an accounting system, and even sold a few products. But unfortunately
-          it turned out that such goods are not in demand in our country. I
-          started working full-time in an outsourcing company.
+          an accounting system, and even sold a few products. But,
+          unfortunately, it turned out that such goods were not in demand in our
+          country. I started working full-time in the outsourcing company.
         </p>
       </>
     ),
@@ -197,51 +233,98 @@ export const TIMELINE: TimelineItem[] = [
     content: (
       <>
         <Zoom zoomImg={{ src: "/img/altir-profile.png" }}>
-          <Image
-            src="/img/altir-profile.png"
-            width={900}
-            height={400}
-            className="float-start me-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
-            alt="My Altir profile"
-          />
+          <motion.div
+            initial={{ x: -20, scale: 0.98 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ delay: 0.2, ease: "circOut" }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src="/img/altir-profile.png"
+              width={900}
+              height={400}
+              className="float-start me-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
+              alt="My Altir profile"
+            />
+          </motion.div>
         </Zoom>
 
         <p>
-          I have been working for a long time on a mobile application that
-          interacts with a hardware device, a smart inverter that collects
-          information about the generation of electricity from solar panels. It
-          was extremely interesting and difficult to understand the Modbus
-          protocol and work with individual bytes of information. Especially
-          when Bluetooth LE limited me in many ways. Unfortunately, funding for
-          this project has run out.
+          I worked for a long time on a mobile application that interacted with
+          a hardware device, a smart inverter that collected information about
+          the generation of electricity from solar panels. Modbus protocol and
+          working with individual bytes of information was extremely fascinating
+          and difficult to understand, especially when Bluetooth LE limited me
+          in many ways. Unfortunately, funding for this project has run out.
         </p>
 
         <p className="mt-4">
           The new investor had his own development team and preferred that they
           continue developing the application. The problem was that they knew
-          nothing about the hardware for which the application was made, nor
-          about the existing application, nor about the technologies that were
-          used in it. That&apos;s why I was hired as a consultant for this team
-          (a consultant who also writes code).
+          nothing about the hardware the application was designed for, the
+          existing application, or the technologies it used. That&apos;s why I
+          was hired as a consultant for this team (a consultant who also writes
+          code).
         </p>
 
         <p className="mt-4">
-          During 9 months of working in an international company, I gained a
-          wealth of experience in communication, mentoring other developers, and
-          also looked at React Native from a different perspective.
+          During working in an international company, I gained a wealth of
+          experience in communication, mentoring other developers, and also
+          looked at React Native from a different perspective.
         </p>
       </>
     ),
   },
   {
-    title: "Current work",
-    timePeriod: <>2024 &mdash; present</>,
+    title: "Germany client",
+    timePeriod: <>2025 &mdash; present</>,
     content: (
-      <p>
-        I still work for the same outsourcing company on many projects at the
-        same time. From time to time, projects are closed or frozen, but new
-        ones appear.
-      </p>
+      <>
+        <Zoom zoomImg={{ src: "/img/german-client.png" }}>
+          <motion.div
+            initial={{ x: 20, scale: 0.98 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ delay: 0.2, ease: "circOut" }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src="/img/german-client.png"
+              width={550}
+              height={852}
+              className="md:float-end ms-8 mb-8! max-w-[200px] rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
+              alt="My profile"
+            />
+          </motion.div>
+        </Zoom>
+
+        <p>
+          I spent a long time looking for a job and going through interviews,
+          and finally found what I was looking for. I remember being incredibly
+          nervous before the final round of interviews, and I had no idea I'd
+          meet a team of dedicated professionals and receive an offer that very
+          evening.
+        </p>
+
+        <p className="mt-4">
+          Neither stress nor the language barrier prevented me from feeling a
+          powerful wave of friendly and carefree vibes that carried me forward
+          and upward throughout our collaboration.
+        </p>
+        <p className="mt-4">
+          I really liked that there was no hierarchy of management within the
+          team and everyone communicated freely and at the same level. It turned
+          out that German sounds quite interesting. I even studied German on
+          Duolingo for a while; my partner didn't realize it was too difficult a
+          language to learn from scratch.
+        </p>
+        <p className="mt-4">
+          But time moves on, and new ambitious goals arise in business,
+          interrupting our interactions, while simultaneously giving me the
+          freedom to move forward. I am now open to new career opportunities and
+          am actively seeking an exciting product that will bring all my
+          experience to the next level of my professionalism.
+        </p>
+      </>
     ),
   },
 ];

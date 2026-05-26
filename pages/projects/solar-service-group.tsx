@@ -16,11 +16,8 @@ export default function SolarServiceGroup() {
   return (
     <>
       <Head>
-        <title>{NAME} - Project Solar Service Group</title>
-        <meta
-          name="description"
-          content="Affordable installing and maintaining solar panels for everyone."
-        />
+        <title>{`${NAME} - Project ${project.name}`}</title>
+        <meta name="description" content={project.description} />
       </Head>
 
       <ProjectLayout project={project}>

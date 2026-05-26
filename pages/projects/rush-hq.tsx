@@ -15,11 +15,8 @@ export default function SolarServiceGroup() {
   return (
     <>
       <Head>
-        <title>{NAME} - Project Rush HQ</title>
-        <meta
-          name="description"
-          content="Melbourne's top indoor adventure and trampoline park"
-        />
+        <title>{`${NAME} - Project ${project.name}`}</title>
+        <meta name="description" content={project.description} />
       </Head>
 
       <ProjectLayout project={project}>
