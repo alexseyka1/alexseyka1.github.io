@@ -3,8 +3,8 @@ import Skills from "@components/main/Skills";
 import { TextSection } from "@components/TextSection";
 import { NAME } from "@config/contact";
 import { PROJECTS } from "@config/projects";
+import ExportedImage from "next-image-export-optimizer";
 import Head from "next/head";
-import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 
 const project = PROJECTS.find(({ id }) => id === "rush-hq");
@@ -34,7 +34,7 @@ export default function SolarServiceGroup() {
           </p>
 
           <Zoom zoomImg={{ src: "/img/projects/rush-hq/trampoline-hall.png" }}>
-            <Image
+            <ExportedImage
               src="/img/projects/rush-hq/trampoline-hall.png"
               width={1200}
               height={800}
@@ -90,7 +90,7 @@ export default function SolarServiceGroup() {
           </p>
 
           <Zoom zoomImg={{ src: "/img/projects/rush-hq/reservations.png" }}>
-            <Image
+            <ExportedImage
               src="/img/projects/rush-hq/reservations.png"
               width={2048}
               height={2880}

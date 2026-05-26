@@ -2,7 +2,7 @@ import { Button } from "@components/ui/Button";
 import { JOB_TITLE, NAME } from "@config/contact";
 import { cn } from "@utils/cn";
 import { motion } from "motion/react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 
@@ -87,7 +87,7 @@ function PhotoBlock() {
         transition={{ duration: 1.5, ease: "circOut" }}
         className="rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
       >
-        <Image
+        <ExportedImage
           src="/img/square-photo.jpeg"
           width={2048}
           height={2048}

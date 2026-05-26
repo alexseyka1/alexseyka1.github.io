@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
 
@@ -22,7 +22,7 @@ export const TIMELINE: TimelineItem[] = [
             transition={{ delay: 0.2, ease: "circOut" }}
             viewport={{ once: true }}
           >
-            <Image
+            <ExportedImage
               src="/img/html-frames.jpg"
               width={977}
               height={506}
@@ -119,7 +119,7 @@ export const TIMELINE: TimelineItem[] = [
             transition={{ delay: 0.2, ease: "circOut" }}
             viewport={{ once: true }}
           >
-            <Image
+            <ExportedImage
               src="/img/dok.jpg"
               width={1000}
               height={562}
@@ -188,7 +188,7 @@ export const TIMELINE: TimelineItem[] = [
             transition={{ delay: 0.2, ease: "circOut" }}
             viewport={{ once: true }}
           >
-            <Image
+            <ExportedImage
               src="/img/leemon.jpg"
               width={1000}
               height={562}
@@ -239,7 +239,7 @@ export const TIMELINE: TimelineItem[] = [
             transition={{ delay: 0.2, ease: "circOut" }}
             viewport={{ once: true }}
           >
-            <Image
+            <ExportedImage
               src="/img/altir-profile.png"
               width={900}
               height={400}
@@ -287,7 +287,7 @@ export const TIMELINE: TimelineItem[] = [
             transition={{ delay: 0.2, ease: "circOut" }}
             viewport={{ once: true }}
           >
-            <Image
+            <ExportedImage
               src="/img/german-client.png"
               width={550}
               height={852}

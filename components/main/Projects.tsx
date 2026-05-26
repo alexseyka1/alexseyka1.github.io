@@ -2,7 +2,7 @@ import { PROJECTS } from "@config/projects";
 import { cn } from "@utils/cn";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 
 export default function Projects() {
@@ -34,7 +34,7 @@ export default function Projects() {
                   >
                     <div className="aspect-video overflow-hidden relative bg-mist-200">
                       {project?.thumbnail?.src != null && (
-                        <Image
+                        <ExportedImage
                           src={project.thumbnail.src}
                           width={project.thumbnail.width}
                           height={project.thumbnail.height}
@@ -49,7 +49,7 @@ export default function Projects() {
                       <h3 className="mb-2 flex items-center justify-between font-semibold">
                         <div className="flex items-center gap-2">
                           {project?.logo?.src != null && (
-                            <Image
+                            <ExportedImage
                               src={project.logo.src}
                               width={project.logo.width}
                               height={project.logo.height}

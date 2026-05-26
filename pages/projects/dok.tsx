@@ -4,8 +4,8 @@ import Skills from "@components/main/Skills";
 import { TextSection } from "@components/TextSection";
 import { NAME } from "@config/contact";
 import { PROJECTS } from "@config/projects";
+import ExportedImage from "next-image-export-optimizer";
 import Head from "next/head";
-import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 
 const project = PROJECTS.find(({ id }) => id === "dok");
@@ -25,7 +25,7 @@ export default function Dok() {
           <div className="text-gray">
             <Zoom zoomImg={{ src: "/img/projects/dok/parsing.jpg" }}>
               <div>
-                <Image
+                <ExportedImage
                   src="/img/projects/dok/parsing.jpg"
                   width={1280}
                   height={720}

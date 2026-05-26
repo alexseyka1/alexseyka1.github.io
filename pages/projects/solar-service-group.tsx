@@ -4,8 +4,8 @@ import Skills from "@components/main/Skills";
 import { TextSection } from "@components/TextSection";
 import { NAME } from "@config/contact";
 import { PROJECTS } from "@config/projects";
+import ExportedImage from "next-image-export-optimizer";
 import Head from "next/head";
-import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 
 const project = PROJECTS.find(({ id }) => id === "solar-service-group");
@@ -24,7 +24,7 @@ export default function SolarServiceGroup() {
         <TextSection title="How it was?" className="border-none border-y">
           <div>
             <Zoom zoomImg={{ src: "/img/projects/ssg/admin-panel.png" }}>
-              <Image
+              <ExportedImage
                 src="/img/projects/ssg/admin-panel.png"
                 width={1000}
                 height={625}
@@ -140,7 +140,7 @@ export default function SolarServiceGroup() {
           </p>
 
           <Zoom zoomImg={{ src: "/img/projects/ssg/installer-app.png" }}>
-            <Image
+            <ExportedImage
               src="/img/projects/ssg/installer-app.png"
               width={1750}
               height={2504}

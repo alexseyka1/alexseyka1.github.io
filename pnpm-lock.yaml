@@ -32,6 +32,9 @@ dependencies:
   next:
     specifier: 16.2.4
     version: 16.2.4(react-dom@19.2.5)(react@19.2.5)
+  next-image-export-optimizer:
+    specifier: ^1.20.1
+    version: 1.20.1(next@16.2.4)(react@19.2.5)
   next-seo:
     specifier: ^6.6.0
     version: 6.8.0(next@16.2.4)(react-dom@19.2.5)(react@19.2.5)
@@ -168,7 +171,6 @@ packages:
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
     engines: {node: '>=18'}
     requiresBuild: true
-    optional: true
 
   /@img/sharp-darwin-arm64@0.34.5:
     resolution: {integrity: sha512-imtQ3WMJXbMY4fxb/Ndp6HBTNVtWCUI0WdobyheGf5+ad6xX8VIDO8u2xE4qc/fr08CKG/7dDseFtn6M6g/r3w==}
@@ -2396,6 +2398,20 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
+  /next-image-export-optimizer@1.20.1(next@16.2.4)(react@19.2.5):
+    resolution: {integrity: sha512-hSQkEBqyjQP+YMVSs+TJiI+keVjgylkxvvOiFNiTfGW57dlPptzctMtMYC6Xx1zcLV4VX8B129y3O2vLFBE/6w==}
+    engines: {node: '>=16.0.0'}
+    hasBin: true
+    peerDependencies:
+      next: ^14.2.18 || ^15.0.3 || ^16.0.0
+      react: '^18.2.0 || ^19.0.0-0 '
+    dependencies:
+      next: 16.2.4(react-dom@19.2.5)(react@19.2.5)
+      react: 19.2.5
+      sharp: 0.34.5
+      typescript: 5.9.3
+    dev: false
+
   /next-seo@6.8.0(next@16.2.4)(react-dom@19.2.5)(react@19.2.5):
     resolution: {integrity: sha512-zcxaV67PFXCSf8e6SXxbxPaOTgc8St/esxfsYXfQXMM24UESUVSXFm7f2A9HMkAwa0Gqn4s64HxYZAGfdF4Vhg==}
     peerDependencies:
@@ -2956,7 +2972,6 @@ packages:
       '@img/sharp-win32-arm64': 0.34.5
       '@img/sharp-win32-ia32': 0.34.5
       '@img/sharp-win32-x64': 0.34.5
-    optional: true
 
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -3229,6 +3244,12 @@ packages:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
     dev: true
+
+  /typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: false
 
   /typescript@6.0.2:
     resolution: {integrity: sha512-bGdAIrZ0wiGDo5l8c++HWtbaNCWTS4UTv7RaTH/ThVIgjkveJt83m74bBHMJkuCbslY8ixgLBVZJIOiQlQTjfQ==}
