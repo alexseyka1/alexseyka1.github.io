@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import Zoom from "react-medium-image-zoom";
 
 type TimelineItem = {
   title: string;
@@ -12,16 +14,16 @@ export const TIMELINE: TimelineItem[] = [
     timePeriod: <>2007 &mdash; 2010</>,
     content: (
       <>
-        <a
-          href="/img/html-frames.jpg"
-          target="_blank"
-          title="HTML frames example"
-        >
-          <img
+        <Zoom zoomImg={{ src: "/img/html-frames.jpg" }}>
+          <Image
             src="/img/html-frames.jpg"
-            className="float-end ms-3 timeline-image"
+            width={977}
+            height={506}
+            className="float-end ms-8 mb-8! timeline-image rounded overflow-hidden shadow-lg border ring-4 ring-white"
+            alt="HTML frames example"
           />
-        </a>
+        </Zoom>
+
         <p>
           I first got involved in development back in my school days, when chats
           within the local area networks of the city, like{" "}
@@ -91,13 +93,17 @@ export const TIMELINE: TimelineItem[] = [
     timePeriod: "2015",
     content: (
       <>
-        <a href="/img/dok.jpg" target="_blank" title="My business card">
-          <img
+        <Zoom zoomImg={{ src: "/img/dok.jpg" }}>
+          <Image
             src="/img/dok.jpg"
-            className="float-start me-3 shadow timeline-image"
+            width={1000}
+            height={562}
+            className="float-start me-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
             alt="Dok.ua the online auto parts store"
+            title="My business card"
           />
-        </a>
+        </Zoom>
+
         <p>
           Having moved to a big city in 2015, I needed to find a job, but all I
           could do was develop quite a bit. That`s how I found my first job as a
@@ -109,7 +115,8 @@ export const TIMELINE: TimelineItem[] = [
           wise mentors, I learned how to build complex queries in MySQL, write
           parsers, work with task trackers and work in a team.
         </p>
-        <p>
+
+        <p className="mt-4">
           There, I began to study the ES6 standard and the javascript frameworks
           Angular 2 and Vue. A little later, I was already giving lectures to my
           employees about these technologies.
@@ -145,17 +152,16 @@ export const TIMELINE: TimelineItem[] = [
     timePeriod: "December 2017",
     content: (
       <>
-        <a
-          href="/img/leemon.jpg"
-          target="_blank"
-          title="Leemon.com.ua store website"
-        >
-          <img
+        <Zoom zoomImg={{ src: "/img/leemon.jpg" }}>
+          <Image
             src="/img/leemon.jpg"
-            className="float-end ms-3 shadow timeline-image"
+            width={1000}
+            height={562}
+            className="float-end ms-8 mb-8! timeline-image rounded overflow-hidden shadow-lg border ring-4 ring-white"
+            title="Leemon.com.ua store website"
             alt="Leemon.com.ua launch my own online sports equipment store"
           />
-        </a>
+        </Zoom>
         <p>
           I left the first company because I didn`t see further growth. I tried
           to launch my own online sports equipment store, developed a website,
@@ -190,11 +196,16 @@ export const TIMELINE: TimelineItem[] = [
     timePeriod: "2023",
     content: (
       <>
-        <img
-          src="/img/altir-profile.png"
-          className="float-start me-3 shadow timeline-image"
-          alt="My Altir profile"
-        />
+        <Zoom zoomImg={{ src: "/img/altir-profile.png" }}>
+          <Image
+            src="/img/altir-profile.png"
+            width={900}
+            height={400}
+            className="float-start me-8 mb-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
+            alt="My Altir profile"
+          />
+        </Zoom>
+
         <p>
           I have been working for a long time on a mobile application that
           interacts with a hardware device, a smart inverter that collects
@@ -204,7 +215,8 @@ export const TIMELINE: TimelineItem[] = [
           when Bluetooth LE limited me in many ways. Unfortunately, funding for
           this project has run out.
         </p>
-        <p>
+
+        <p className="mt-4">
           The new investor had his own development team and preferred that they
           continue developing the application. The problem was that they knew
           nothing about the hardware for which the application was made, nor
@@ -212,7 +224,8 @@ export const TIMELINE: TimelineItem[] = [
           used in it. That&apos;s why I was hired as a consultant for this team
           (a consultant who also writes code).
         </p>
-        <p>
+
+        <p className="mt-4">
           During 9 months of working in an international company, I gained a
           wealth of experience in communication, mentoring other developers, and
           also looked at React Native from a different perspective.

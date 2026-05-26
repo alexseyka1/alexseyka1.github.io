@@ -74,79 +74,25 @@ export default function Footer() {
             >
               <h3 className="mb-6 font-semibold">Projects</h3>
               <ul className="flex flex-col gap-2">
-                {PROJECTS.map((project) => {
-                  const hasContent = project.content != null;
-                  const As = hasContent ? Link : Div;
-
-                  return (
-                    <li key={project.id} className="text-mist-400">
-                      {hasContent ? (
-                        <Link
-                          href={`/projects/${project.id}`}
-                          passHref
-                          className="hover:text-mist-50"
-                        >
-                          {project.name}
-                        </Link>
-                      ) : (
-                        <div>{project.name}</div>
-                      )}
-                    </li>
-                  );
-                })}
+                {PROJECTS.map((project) => (
+                  <li key={project.id} className="text-mist-400">
+                    {project.hasContent ? (
+                      <Link
+                        href={`/projects/${project.id}`}
+                        passHref
+                        className="hover:text-mist-50"
+                      >
+                        {project.name}
+                      </Link>
+                    ) : (
+                      <div>{project.name}</div>
+                    )}
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </div>
         </motion.div>
-      </div>
-    </footer>
-  );
-
-  return (
-    <footer
-      className={cn(
-        "inset-shadow-[0_-20px_20px_-30px] inset-shadow-mist-300",
-        "bg-mist-800 text-mist-50",
-        "flex flex-col justify-center items-center",
-        "bg-[radial-gradient(var(--color-gray-800)_2px,transparent_0)] bg-size-[40px_40px]",
-      )}
-    >
-      <div className="container max-w-6xl! py-24 flex flex-col gap-8 items-center">
-        <h2 className="text-center text-xl">About Me</h2>
-        <div className="w-full max-w-2xl md:order-1 flex justify-center items-center">
-          <div className="w-full flex flex-row justify-between items-start">
-            <div className="flex flex-col gap-8">
-              <h5 className="text-xl">Sections</h5>
-              <ul className="flex flex-col justify-center items-start">
-                {MENU_ITEMS.map(({ label, href }) => (
-                  <li key={label}>
-                    <Link href={href} passHref>
-                      <span className="">{label}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-8">
-              <h5 className="text-xl">Projects</h5>
-              <ul>
-                {PROJECTS.map((project) => {
-                  const hasContent = project.content != null;
-                  const As = hasContent ? Link : Div;
-
-                  return (
-                    <li key={project.id}>
-                      <As href={`/projects/${project.id}`} passHref>
-                        {project.name}
-                      </As>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );

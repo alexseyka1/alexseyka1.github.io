@@ -1,3 +1,4 @@
+import { ChallengeAndSolution } from "@components/ChallengeAndSolution";
 import { ProjectLayout } from "@components/layouts/ProjectLayout";
 import Skills from "@components/main/Skills";
 import { TextSection } from "@components/TextSection";
@@ -196,6 +197,53 @@ export default function SolarServiceGroup() {
             convenient for them.
           </p>
         </TextSection>
+
+        <div className="bg-white border-b">
+          <ChallengeAndSolution
+            challenge={
+              <p className="text-gray">
+                After launching the email campaign system, incoming customer
+                replies were delivered to the corporate email. The existing
+                email service offered an API for integration, but its high cost
+                made it impractical.
+              </p>
+            }
+            solution={
+              <p className="text-gray">
+                I Developed a custom daemon using the IMAP protocol to connect
+                to the mail server, read and process emails, download
+                attachments, save them into the system&apos;s database, and
+                organize them into appropriate folders. This made emails
+                accessible directly within the CRM, enabling smooth
+                communication with customers and significantly reducing costs.
+              </p>
+            }
+          />
+
+          <hr className="max-w-xl m-auto border-primary-800/30" />
+
+          <ChallengeAndSolution
+            challenge={
+              <p className="text-gray">
+                Field agents and solar installers needed to input data and
+                upload photos while on-site, but the main admin panel was not
+                mobile-friendly.
+              </p>
+            }
+            solution={
+              <div className="text-gray">
+                <p>
+                  Created a lightweight, responsive web application optimized
+                  for smartphones and tablets using the Vue framework. The app
+                  integrated with the CRM via JSON and allowed employees to
+                  manage tasks, upload photos, create leads, sign contracts
+                  digitally, take payments, and update job statuses - all from
+                  their mobile devices.
+                </p>
+              </div>
+            }
+          />
+        </div>
 
         {project.skills != null && (
           <Skills title="Technology Stack" skills={project.skills} />
