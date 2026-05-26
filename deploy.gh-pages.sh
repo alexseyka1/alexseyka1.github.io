@@ -13,7 +13,6 @@ mkdir "../$tempdir" && (\
     && git checkout $from_branch \
     && pnpm i \
     && pnpm run build \
-    && pnpm run export\
     && rm -rf ./node_modules \
   ) \
   && (cd code \
