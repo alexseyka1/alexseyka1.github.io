@@ -164,6 +164,11 @@ export const PROJECTS: Project[] = [
       height: 150,
       className: "bg-gray-800 rounded-full",
     },
+    detailsImage: {
+      src: "/img/projects/enertek/device.png",
+      width: 1242,
+      height: 1215,
+    },
     timePeriod: <>2019 &mdash; 2024</>,
     shortLine: "Built-in intelligence at your fingertips",
     title: "Power you can count on.",
@@ -172,7 +177,6 @@ export const PROJECTS: Project[] = [
     // website: "",
     internetArchiveUrl:
       "https://web.archive.org/web/20230609151311/https://energizerhomepower.com/",
-    content: null,
   },
   {
     id: "warrp-it",
@@ -188,15 +192,19 @@ export const PROJECTS: Project[] = [
       width: 150,
       height: 150,
     },
+    detailsImage: {
+      src: "/img/projects/warrp/screenshot.png",
+      width: 1000,
+      height: 500,
+    },
     timePeriod: <>2020 &mdash; 2021</>,
-    // shortLine: "",
-    // title: "",
+    shortLine: "A symbol of a better tomorrow",
+    title: "Just Warrp.it",
     description:
       "iOS marketplace app based on an end-to-end design to make it S.A.F.E. for everyone. Buyers and sellers can Securely transact while the rest of the community plays an Active role in ensuring prices are Fair...",
-    // website: "",
+    website: "https://warrp.it/",
     internetArchiveUrl:
       "https://web.archive.org/web/20210716062155/https://warrp.it/",
-    // content: "",
   },
   {
     id: "racer-club",
@@ -212,15 +220,19 @@ export const PROJECTS: Project[] = [
       width: 500,
       height: 500,
     },
+    detailsImage: {
+      src: "/img/projects/racer-club/thumbnail.png",
+      width: 1594,
+      height: 897,
+    },
     timePeriod: "2023",
-    // shortLine: "",
-    // title: "",
+    shortLine: "Create your own characters",
+    title: "Web3 Community Racing",
     description:
-      "Multiplayer racing game built with Unreal Engine 5 for Racer Club GameFi platform.",
-    // website: "",
+      "Ethereum based GameFi platform leading the Web3 movement to Esports.",
+    website: "https://racerclub.game/",
     internetArchiveUrl:
       "https://web.archive.org/web/20230410175530/https://racerclub.game/",
-    // content: "",
   },
   {
     id: "hyperian",
@@ -236,15 +248,19 @@ export const PROJECTS: Project[] = [
       width: 64,
       height: 64,
     },
+    detailsImage: {
+      src: "/img/projects/hyperian/thumbnail.png",
+      width: 2502,
+      height: 2200,
+    },
     timePeriod: <>2023 &mdash; 2024</>,
-    // shortLine: "",
-    // title: "",
+    shortLine: "Powering Homes with Endless Clean Energy",
+    title: "Decentralized and autonomous energy grid",
     description:
       "Secure and powerful cloud-based operational software suite, enabling partners to monitor, control and manage the overall fleet, effectively onboard installers, and support the end-users providing a seamless experience across the Hyperian product range.",
     website: "https://hyperian.com/",
     internetArchiveUrl:
       "https://web.archive.org/web/20241006135509/https://hyperian.com/",
-    // content: "",
   },
   {
     id: "german-client",
@@ -260,13 +276,17 @@ export const PROJECTS: Project[] = [
       width: 594,
       height: 594,
     },
+    detailsImage: {
+      src: "/img/projects/german-client/landscape.jpg",
+      width: 6016,
+      height: 4000,
+    },
     timePeriod: <>2025 &mdash; 2026</>,
-    // shortLine: "",
-    // title: "",
+    shortLine: "Powering progress through clean connection",
+    title: "B2B platform that connects leading power producers with consumers",
     description:
       "Intelligent B2B platform that connects Europe’s leading renewable power producers with enterprises committed to reducing their carbon footprint.",
     // website: "",
     // internetArchiveUrl: "",
-    // content: "",
   },
 ];

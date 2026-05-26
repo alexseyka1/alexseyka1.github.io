@@ -11,9 +11,9 @@ mkdir "../$tempdir" && (\
   && git clone $repo code \
   && (cd code \
     && git checkout $from_branch \
-    && yarn \
-    && yarn build \
-    && yarn export\
+    && pnpm i \
+    && pnpm run build \
+    && pnpm run export\
     && rm -rf ./node_modules \
   ) \
   && (cd code \
