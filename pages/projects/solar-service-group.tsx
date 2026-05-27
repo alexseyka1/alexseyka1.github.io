@@ -2,7 +2,7 @@ import { ChallengeAndSolution } from "@components/ChallengeAndSolution";
 import { ProjectLayout } from "@components/layouts/ProjectLayout";
 import Skills from "@components/main/Skills";
 import { TextSection } from "@components/TextSection";
-import { NAME } from "@config/contact";
+import { GITHUB_URL, NAME } from "@config/contact";
 import { PROJECTS } from "@config/projects";
 import ExportedImage from "next-image-export-optimizer";
 import Head from "next/head";
@@ -12,12 +12,20 @@ const project = PROJECTS.find(({ id }) => id === "solar-service-group");
 
 export default function SolarServiceGroup() {
   if (!project) return;
+  const title = `${NAME} - Project ${project.name}`;
+  const description = project.description;
+  const ogImage = `${GITHUB_URL}${project.detailsImage.src}`;
+  const projectUrl = `${GITHUB_URL}/projects/${project.id}`;
 
   return (
     <>
       <Head>
-        <title>{`${NAME} - Project ${project.name}`}</title>
-        <meta name="description" content={project.description} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={projectUrl} />
       </Head>
 
       <ProjectLayout project={project}>

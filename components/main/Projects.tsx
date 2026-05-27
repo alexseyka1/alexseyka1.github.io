@@ -30,7 +30,7 @@ export default function Projects() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="bg-white group rounded-xl ring-4 ring-white hover:ring-2 hover:ring-primary-600 transition-all overflow-hidden shadow-lg relative"
+                    className="bg-white group rounded-xl ring-4 ring-white hover:ring-2 hover:ring-primary-600 overflow-hidden shadow-lg relative"
                   >
                     <div className="aspect-video overflow-hidden relative bg-mist-200">
                       {project?.thumbnail?.src != null && (

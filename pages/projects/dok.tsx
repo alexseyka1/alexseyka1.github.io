@@ -2,7 +2,7 @@ import { ChallengeAndSolution } from "@components/ChallengeAndSolution";
 import { ProjectLayout } from "@components/layouts/ProjectLayout";
 import Skills from "@components/main/Skills";
 import { TextSection } from "@components/TextSection";
-import { NAME } from "@config/contact";
+import { GITHUB_URL, NAME } from "@config/contact";
 import { PROJECTS } from "@config/projects";
 import ExportedImage from "next-image-export-optimizer";
 import Head from "next/head";
@@ -12,12 +12,20 @@ const project = PROJECTS.find(({ id }) => id === "dok");
 
 export default function Dok() {
   if (!project) return;
+  const title = `${NAME} - Project ${project.name}`;
+  const description = project.description;
+  const ogImage = `${GITHUB_URL}${project.detailsImage.src}`;
+  const projectUrl = `${GITHUB_URL}/projects/${project.id}`;
 
   return (
     <>
       <Head>
-        <title>{`${NAME} - Project ${project.name}`}</title>
-        <meta name="description" content={project.description} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={projectUrl} />
       </Head>
 
       <ProjectLayout project={project}>
@@ -46,7 +54,7 @@ export default function Dok() {
                 href="https://phantomjs.org"
                 title="PhantomJS website"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer nofollow"
                 className="text-primary underline underline-offset-4 hover:no-underline"
               >
                 PhantomJS
@@ -62,7 +70,7 @@ export default function Dok() {
                 href="https://www.codeigniter.com"
                 title="CodeIgniter"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer nofollow"
                 className="text-primary underline underline-offset-4 hover:no-underline"
               >
                 CodeIgniter
@@ -73,7 +81,7 @@ export default function Dok() {
                 href="https://www.yiiframework.com/doc/guide/1.1/en"
                 title="Yii framework website"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer nofollow"
                 className="text-primary underline underline-offset-4 hover:no-underline"
               >
                 Yii
@@ -86,7 +94,7 @@ export default function Dok() {
                 href="http://doc.php.net/archives/php5"
                 title="PHP 5.6 archive manual"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer nofollow"
                 className="text-primary underline underline-offset-4 hover:no-underline"
               >
                 PHP 5.6
@@ -97,7 +105,7 @@ export default function Dok() {
                 href="https://jquery.com"
                 title="jQuery website"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer nofollow"
                 className="text-primary underline underline-offset-4 hover:no-underline"
               >
                 jQuery
@@ -170,10 +178,12 @@ export default function Dok() {
             <div className="h-16"></div>
 
             <Zoom zoomImg={{ src: "/img/projects/dok/content.png" }}>
-              <img
+              <ExportedImage
                 src="/img/projects/dok/content.png"
+                width={1000}
+                height={625}
                 className="float-start me-8 mt-8! timeline-image rounded-xl overflow-hidden shadow-lg border ring-4 ring-white"
-                title="Web application with content tools"
+                alt="Web application with content tools"
               />
             </Zoom>
 

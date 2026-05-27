@@ -1,4 +1,5 @@
 import { JOB_START_YEAR } from "@config/contact";
+import { cn } from "@utils/cn";
 import { Code2, Cpu, Globe, Hash } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -68,25 +69,32 @@ function DescriptionBlock() {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-4 mt-6 md:mt-none">
-        {[
-          { icon: Hash, label: "Backend" },
-          { icon: Hash, label: "Frontend" },
-          { icon: Hash, label: "Mobile" },
-          { icon: Hash, label: "Architecture" },
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="flex flex-row items-center gap-2 font-extralight"
-          >
-            <item.icon className="w-4 h-4" />
-            <p>{item.label}</p>
-          </motion.div>
-        ))}
+      <div className="w-full flex justify-center items-center">
+        <div
+          className={cn(
+            "w-fit md:w-full grid grid-cols-2 grid-rows-2 gap-4 mt-6",
+            "md:grid-cols-4 md:grid-rows-1 md:mt-none",
+          )}
+        >
+          {[
+            { icon: Hash, label: "Backend" },
+            { icon: Hash, label: "Frontend" },
+            { icon: Hash, label: "Mobile" },
+            { icon: Hash, label: "Architecture" },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="flex flex-row items-center gap-2 font-extralight"
+            >
+              <item.icon className="w-4 h-4" />
+              <p>{item.label}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

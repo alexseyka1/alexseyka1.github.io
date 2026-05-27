@@ -87,3 +87,6 @@ tsconfig.tsbuildinfo
 /objects
 /refs
 .playwright-mcp/
+
+/public/img/**/_optimized
+/public/img/next-image-export-optimizer-hashes.json

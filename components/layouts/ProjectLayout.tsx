@@ -1,4 +1,5 @@
 import { Button } from "@components/ui/Button";
+import { GITHUB_URL, NAME } from "@config/contact";
 import { Project } from "@config/projects";
 import { cn } from "@utils/cn";
 import { motion } from "motion/react";
@@ -12,34 +13,63 @@ type Props = {
 };
 
 export function ProjectLayout({ project, children }: Props) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.name,
+    description: project.description,
+    author: {
+      "@type": "Person",
+      name: NAME,
+    },
+    url: GITHUB_URL,
+    ...(project.skills != null
+      ? {
+          keywords: Object.values(project.skills)
+            .map((items) => items.join(", "))
+            .join(", "),
+        }
+      : {}),
+  };
+
   return (
     <>
-      <div
-        className={cn(
-          "min-h-[50vh] bg-mist-50",
-          "flex flex-col justify-center items-center",
-          "bg-[radial-gradient(var(--color-gray-200)_2px,transparent_0)] bg-size-[40px_40px]",
-        )}
-      >
-        <div className="container max-w-6xl!">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
-            <div className="order-2 md:order-1 flex justify-center items-center pb-12 md:py-12">
-              <DescriptionBlock {...project} />
-            </div>
+      {/* Add JSON-LD to your page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
 
-            <div className="order-1 md:order-2 pt-5 md:py-8 flex justify-center items-center">
-              <PhotoBlock
-                title={project.title}
-                src={project.detailsImage.src}
-                width={project.detailsImage.width}
-                height={project.detailsImage.height}
-              />
+      <article itemScope itemType="http://schema.org/Article">
+        <div
+          className={cn(
+            "min-h-[50vh] bg-mist-50",
+            "flex flex-col justify-center items-center",
+            "bg-[radial-gradient(var(--color-gray-200)_2px,transparent_0)] bg-size-[40px_40px]",
+          )}
+        >
+          <div className="container max-w-6xl!">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
+              <div className="order-2 md:order-1 flex justify-center items-center pb-12 md:py-12">
+                <DescriptionBlock {...project} />
+              </div>
+
+              <div className="order-1 md:order-2 pt-5 md:py-8 flex justify-center items-center">
+                <PhotoBlock
+                  title={project.title}
+                  src={project.detailsImage.src}
+                  width={project.detailsImage.width}
+                  height={project.detailsImage.height}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {children}
+        {children}
+      </article>
     </>
   );
 }
@@ -51,7 +81,6 @@ function DescriptionBlock({
   position,
   website,
   internetArchiveUrl,
-  timePeriod,
 }: Pick<
   Project,
   | "shortLine"
@@ -60,7 +89,6 @@ function DescriptionBlock({
   | "position"
   | "website"
   | "internetArchiveUrl"
-  | "timePeriod"
 >) {
   return (
     <motion.div
@@ -70,13 +98,16 @@ function DescriptionBlock({
       className="flex flex-col items-start"
     >
       <p className="backdrop-blur-xs">{shortLine}</p>
-      <h1 className="backdrop-blur-xs text-5xl font-medium lh-1 mb-0">
+      <h1
+        itemProp="headline"
+        className="backdrop-blur-xs text-5xl font-medium lh-1 mb-0"
+      >
         {title}
       </h1>
       <p className="backdrop-blur-xs text-lg text-gray mb-3">as {position}</p>
-      <p className="backdrop-blur-xs text-xl font-extralight py-2 leading-relaxed">
+      <h2 className="backdrop-blur-xs text-xl font-extralight py-2 leading-relaxed">
         {description}
-      </p>
+      </h2>
 
       <div className="w-full md:w-auto flex flex-row flex-wrap items-center mt-4 gap-2">
         {website != null && (

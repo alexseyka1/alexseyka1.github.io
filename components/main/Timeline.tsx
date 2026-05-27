@@ -10,7 +10,9 @@ export default function Timeline() {
       id="timeline"
     >
       <div className="container max-w-6xl! py-24 flex flex-col gap-8 items-center">
-        <h2 className="text-center text-xl">Timeline</h2>
+        <h1 itemProp="headline" className="text-center text-xl">
+          Timeline
+        </h1>
         <div className="md:order-1 flex justify-center items-center">
           <ul className="timeline">
             {TIMELINE.map((item, i) => (

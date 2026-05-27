@@ -38,7 +38,7 @@ export const TIMELINE: TimelineItem[] = [
           <a
             href="https://uk.wikipedia.org/wiki/Net_Speakerphone"
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer nofollow"
             title="Net Speakerphone"
             className="text-primary underline underline-offset-4 hover:no-underline"
           >
@@ -48,7 +48,7 @@ export const TIMELINE: TimelineItem[] = [
           <a
             href="https://en.wikipedia.org/wiki/MIRC"
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer nofollow"
             title="mIRC"
             className="text-primary underline underline-offset-4 hover:no-underline"
           >
@@ -67,7 +67,7 @@ export const TIMELINE: TimelineItem[] = [
           <a
             href="https://museum.php.net/php3/"
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer nofollow"
             title="manual for PHP 3"
             className="text-primary underline underline-offset-4 hover:no-underline"
           >
@@ -95,7 +95,7 @@ export const TIMELINE: TimelineItem[] = [
         <a
           href="http://www.denwer.ru/"
           target="_blank"
-          rel="noreferrer"
+          rel="noreferrer nofollow"
           title="Denwer"
           className="text-primary underline underline-offset-4 hover:no-underline"
         >
@@ -163,7 +163,7 @@ export const TIMELINE: TimelineItem[] = [
         <a
           href="https://aussiedev.com.au/"
           target="_blank"
-          rel="noreferrer"
+          rel="noreferrer nofollow"
           title="Aussiedev"
           className="text-primary underline underline-offset-4 hover:no-underline"
         >

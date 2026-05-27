@@ -49,7 +49,7 @@ export const Button = forwardRef<HTMLElement, ButtonProps>(
         disabled={disabled}
         className={cn(
           // Base
-          "px-6 py-2 relative inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 cursor-pointer",
+          "px-6 py-2 relative inline-flex items-center justify-center rounded-lg font-semibold duration-200 cursor-pointer",
           // Variant
           variantClasses[resolved],
           // Disabled

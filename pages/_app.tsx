@@ -1,4 +1,3 @@
-import { JOB_TITLE, NAME } from "@config/contact";
 import { cn } from "@utils/cn";
 import { AppProps } from "next/app";
 import { Comic_Neue } from "next/font/google";
@@ -23,17 +22,10 @@ function MyApp({
     <>
       <Head>
         <link rel="icon" type="image/png" href="/logo.png" />
-        <title>{`${NAME} - ${JOB_TITLE}`}</title>
-        <meta
-          name="description"
-          content="I make amazing complex systems that solve business problems and help it grow, as well as easy to use"
-        />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
       </Head>
 
       <div className={cn("w-screen", openSans.variable)}>

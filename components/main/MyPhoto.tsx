@@ -1,5 +1,5 @@
 import { Button } from "@components/ui/Button";
-import { JOB_TITLE, NAME } from "@config/contact";
+import { DESCRIPTION, JOB_TITLE, NAME } from "@config/contact";
 import { cn } from "@utils/cn";
 import { motion } from "motion/react";
 import ExportedImage from "next-image-export-optimizer";
@@ -46,9 +46,7 @@ function DescriptionBlock() {
         &mdash; {JOB_TITLE}
       </p>
       <p className="backdrop-blur-xs text-xl font-extralight py-2 leading-relaxed">
-        Using my experience and development skills, I make amazing complex
-        systems that solve business problems and help it grow, as well as easy
-        to use.
+        {DESCRIPTION}
       </p>
 
       <div className="w-full md:w-auto flex flex-row flex-wrap items-center mt-4 gap-2">

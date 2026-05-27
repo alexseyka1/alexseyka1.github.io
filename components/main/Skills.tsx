@@ -43,7 +43,7 @@ export default function Skills({ title, skills }: Props) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-xl p-8 border hover:ring-2 ring-primary-600 transition-all"
+                className="bg-white rounded-xl p-8 border hover:ring-2 ring-primary-600"
               >
                 <category.icon className="w-10 h-10 mb-4 text-primary-600" />
                 <h3 className="mb-6 font-semibold">{category.title}</h3>
