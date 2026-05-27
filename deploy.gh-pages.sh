@@ -8,20 +8,20 @@ tempdir='_gh-pages-export'
 
 mkdir "../$tempdir" && (\
   cd "../$tempdir" \
-  && git clone $repo code \
-  && (cd code \
+  && git clone $repo build \
+  && (cd build \
     && git checkout $from_branch \
     && pnpm i \
     && pnpm run build \
-    && rm -rf ./node_modules \
   ) \
-  && (cd code \
-    && mv "./$out_dir" "../$out_dir" \
+  && git clone $repo deploy \
+  && (cd deploy \
     && git checkout $to_branch \
-    && cp -R "../$out_dir"/* . \
+    && git pull origin $to_branch \
+    && cp -R "../build/$out_dir"/* . \
     && git status \
   ) \
-  && (cd code \
+  && (cd deploy \
     && git add . \
     && git commit -m "Deployed by Bash script" \
     && git push origin $to_branch
