@@ -1,9 +1,9 @@
+import Topbar from "@components/Topbar";
 import { cn } from "@utils/cn";
 import { AppProps } from "next/app";
 import { Comic_Neue } from "next/font/google";
 import Head from "next/head";
 import Footer from "../components/Footer";
-import Topbar from "../components/Topbar";
 import "../styles/globals.css";
 
 const openSans = Comic_Neue({
@@ -21,7 +21,7 @@ function MyApp({
   return (
     <>
       <Head>
-        <link rel="icon" type="image/png" href="/logo.png" />
+        <link rel="icon" type="image/png" href="/img/logo.png" />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

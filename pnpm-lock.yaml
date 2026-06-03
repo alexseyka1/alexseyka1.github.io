@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  7.css:
+    specifier: ^0.21.1
+    version: 0.21.1
   '@tailwindcss/postcss':
     specifier: ^4.2.2
     version: 4.3.0
@@ -99,6 +102,10 @@ devDependencies:
     version: 6.0.2
 
 packages:
+
+  /7.css@0.21.1:
+    resolution: {integrity: sha512-Q+/aFUpGemoR/Zltj4a7yvHonyxfb+9cgiwBL+j/Lm+H28EOoLzWoJki7MdGPV+3mLCvKSCVqr3M2x2uNYyeWw==}
+    dev: false
 
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}

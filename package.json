@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "typecheck": "tsc --noEmit",
+    "optimize-images": "next-image-export-optimizer",
     "build": "next build && next-image-export-optimizer",
     "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "7.css": "^0.21.1",
     "@tailwindcss/postcss": "^4.2.2",
     "@untitled-ui/icons-react": "^0.1.4",
     "autoprefixer": "^10.5.0",
