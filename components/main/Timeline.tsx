@@ -1,6 +1,7 @@
 import "7.css/dist/7.scoped.css";
 import { JOB_START_YEAR, NAME } from "@config/contact";
 import { MENU_ITEMS } from "@config/menu";
+import { PROJECTS } from "@config/projects";
 import { TIMELINE } from "@config/timeline";
 import { cn } from "@utils/cn";
 import { motion } from "motion/react";
@@ -94,24 +95,70 @@ export default function Timeline() {
                 </li>
 
                 {MENU_ITEMS.filter((item) => item.href !== "/#").map(
-                  ({ label, href }) => (
-                    <Link
-                      key={label}
-                      href={href}
-                      role="menuitem"
-                      tabIndex={0}
-                      aria-haspopup="true"
-                      passHref
-                      className="group no-underline! mt-0! cursor-default!"
-                      {...(href === "/timeline"
-                        ? { "aria-disabled": true }
-                        : {})}
-                    >
-                      <p className="text-black group-hover:text-white!">
-                        {label}
-                      </p>
-                    </Link>
-                  ),
+                  ({ label, href }) => {
+                    if (href === "/#projects") {
+                      return (
+                        <li
+                          key={"Projects"}
+                          role="menuitem"
+                          tabIndex={0}
+                          aria-haspopup="true"
+                        >
+                          Projects
+                          <ul role="menu">
+                            {PROJECTS.map((project, i) => (
+                              <li
+                                key={i}
+                                role="menuitem"
+                                {...(!project.hasContent
+                                  ? { "aria-disabled": true }
+                                  : {})}
+                                title={project.description}
+                              >
+                                {project?.logo?.src != null && (
+                                  <ExportedImage
+                                    src={project.logo.src}
+                                    width={project.logo.width}
+                                    height={project.logo.height}
+                                    alt={`${project.name} logo`}
+                                    className={cn(
+                                      "h-4 w-4 pointer-events-none",
+                                      project.logo.className,
+                                    )}
+                                    loading="lazy"
+                                    draggable={false}
+                                  />
+                                )}
+
+                                <Link href={`/projects/${project.id}`} passHref>
+                                  {project.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      );
+                    }
+
+                    return (
+                      <Link
+                        key={label}
+                        href={href}
+                        role="menuitem"
+                        tabIndex={0}
+                        aria-haspopup="true"
+                        passHref
+                        className="group no-underline! mt-0! cursor-default!"
+                        {...(href === "/timeline"
+                          ? { "aria-disabled": true }
+                          : {})}
+                      >
+                        <p className="text-black group-hover:text-white!">
+                          {label}
+                        </p>
+                      </Link>
+                    );
+                  },
                 )}
               </ul>
 

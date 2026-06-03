@@ -95,6 +95,6 @@ export default function Projects() {
   );
 }
 
-function Div({ children }: { children: React.ReactNode }) {
+export function Div({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
