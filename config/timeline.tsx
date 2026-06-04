@@ -300,9 +300,9 @@ export const TIMELINE: TimelineItem[] = [
         <p>
           I spent a long time looking for a job and going through interviews,
           and finally found what I was looking for. I remember being incredibly
-          nervous before the final round of interviews, and I had no idea I'd
-          meet a team of dedicated professionals and receive an offer that very
-          evening.
+          nervous before the final round of interviews, and I had no idea
+          I&apos;d meet a team of dedicated professionals and receive an offer
+          that very evening.
         </p>
 
         <p className="mt-4">
