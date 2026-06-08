@@ -2,9 +2,6 @@
 @import "react-medium-image-zoom/dist/styles.css";
 @config "../tailwind.config.mjs";
 
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"); */
-/* @import "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"; */
-
 :root {
   --navigation-height: 3.5rem;
   --inbox-sidebar-width: 25rem;
@@ -66,32 +63,6 @@ body {
 }
 .topbar [type="checkbox"]:checked + .collapse {
   display: block;
-}
-
-.introducing-photo-column {
-  aspect-ratio: 1;
-  background-color: #f4f4f4;
-  background-image: url(/img/bw.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-  max-width: 90%;
-  position: relative;
-  padding: 0;
-}
-.introducing-photo-column::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  background-image: inherit;
-  background-repeat: inherit;
-  background-position: inherit;
-  background-size: inherit;
-  display: block;
-  width: 200%;
-  height: 100%;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-  border-radius: inherit;
 }
 
 .main-content {
