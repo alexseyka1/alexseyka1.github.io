@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://alexseyka1.github.io
+
+# Sitemaps
+Sitemap: https://alexseyka1.github.io/sitemap.xml
